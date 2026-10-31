@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+  "size": {
+    "x": 32,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "gallows0"
+    },
+    {
+      "name": "gallows1",
+      "delays": [
+        [
+          0.5,
+          0.4,
+          0.6,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      ]
+    },
+    {
+      "name": "gallows2"
+    },
+    {
+      "name": "gallows2a"
+    },
+    {
+      "name": "gallows2b"
+    }
+  ]
+}

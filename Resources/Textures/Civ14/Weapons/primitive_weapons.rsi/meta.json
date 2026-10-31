@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "primitive_axe_1",
+      "directions": 1
+    },
+    {
+      "name": "primitive_axe_2",
+      "directions": 1
+    },
+    {
+      "name": "primitive_axe_3",
+      "directions": 1
+    },
+    {
+      "name": "primitive_knife_1",
+      "directions": 1
+    },
+    {
+      "name": "primitive_knife_2",
+      "directions": 1
+    },
+    {
+      "name": "primitive_knife_3",
+      "directions": 1
+    },
+    {
+      "name": "primitive_hammer_1",
+      "directions": 1
+    },
+    {
+      "name": "primitive_handle",
+      "directions": 1
+    },
+    {
+      "name": "primitive_handle_twined",
+      "directions": 1
+    },
+    {
+      "name": "primitive_hammerhead_1",
+      "directions": 1
+    },
+    {
+      "name": "primitive_axehead_1",
+      "directions": 1
+    },
+    {
+      "name": "primitive_axehead_2",
+      "directions": 1
+    },
+    {
+      "name": "primitive_axehead_3",
+      "directions": 1
+    },
+    {
+      "name": "primitive_knifehead_1",
+      "directions": 1
+    },
+    {
+      "name": "primitive_knifehead_2",
+      "directions": 1
+    },
+    {
+      "name": "primitive_knifehead_3",
+      "directions": 1
+    },
+    {
+      "name": "twine",
+      "directions": 1
+    },
+    {
+      "name": "flint",
+      "directions": 1
+    },
+    {
+      "name": "primitive_spearhead_1",
+      "directions": 1
+    },
+    {
+      "name": "primitive_spearhead_2",
+      "directions": 1
+    },
+    {
+      "name": "primitive_spearhead_3",
+      "directions": 1
+    },
+    {
+      "name": "primitive_spear_1",
+      "directions": 1
+    },
+    {
+      "name": "primitive_spear_2",
+      "directions": 1
+    },
+    {
+      "name": "primitive_spear_3",
+      "directions": 1
+    },
+    {
+      "name": "obsidian",
+      "directions": 1
+    },
+    {
+      "name": "rock",
+      "directions": 1
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": ""
+    },
+    {
+      "name": "OPTICS"
+    },
+    {
+      "name": "type97_tank"
+    },
+    {
+      "name": "type97"
+    },
+    {
+      "name": "type99"
+    },
+    {
+      "name": "apx"
+    },
+    {
+      "name": "sniper_scope"
+    },
+    {
+      "name": "acog"
+    },
+    {
+      "name": "elcan"
+    },
+    {
+      "name": "pu"
+    },
+    {
+      "name": "holographic"
+    },
+    {
+      "name": "reddot"
+    },
+    {
+      "name": "spp"
+    },
+    {
+      "name": "pso1"
+    },
+    {
+      "name": "pso4"
+    },
+    {
+      "name": "zf39"
+    },
+    {
+      "name": "zf4"
+    },
+    {
+      "name": "UNDERBARREL"
+    },
+    {
+      "name": "laser"
+    },
+    {
+      "name": "foregrip"
+    },
+    {
+      "name": "foregrip_alt"
+    },
+    {
+      "name": "grenade_launcher"
+    },
+    {
+      "name": "SUPPERSSORS"
+    },
+    {
+      "name": "silencer"
+    },
+    {
+      "name": "bramid"
+    },
+    {
+      "name": "srm_silencer"
+    },
+    {
+      "name": "pbs1"
+    },
+    {
+      "name": "ww2_pistol_suppressor"
+    },
+    {
+      "name": "ww2_revolver_suppressor"
+    },
+    {
+      "name": "ww2_rifle_suppressor"
+    },
+    {
+      "name": "ww2_smg_suppressor"
+    },
+    {
+      "name": "modern_pistol_suppressor"
+    },
+    {
+      "name": "modern_rifle_suppressor"
+    },
+    {
+      "name": "modern_smg_suppressor"
+    },
+    {
+      "name": "modern_carbine_suppressor"
+    },
+    {
+      "name": "modern_shotgun_suppressor"
+    },
+    {
+      "name": "plastic_bottle_suppressor"
+    },
+    {
+      "name": "oil_filter_suppressor"
+    },
+    {
+      "name": "MISC"
+    },
+    {
+      "name": "bayonet"
+    },
+    {
+      "name": "jap_flag"
+    },
+    {
+      "name": "jap_flag_ongun",
+      "delays": [
+        [
+          0.7,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ]
+      ]
+    }
+  ]
+}

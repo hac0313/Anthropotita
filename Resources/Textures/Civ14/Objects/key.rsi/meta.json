@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "key"
+    },
+    {
+      "name": "treasure_key"
+    },
+    {
+      "name": "keychain_1"
+    },
+    {
+      "name": "keychain_2"
+    },
+    {
+      "name": "keychain_3"
+    },
+    {
+      "name": "keychain_many"
+    },
+    {
+      "name": "keychain_0"
+    },
+    {
+      "name": "modern"
+    }
+  ]
+}

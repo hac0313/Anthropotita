@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+  "size": {
+    "x": 85,
+    "y": 85
+  },
+  "states": [
+    {
+      "name": "triceratops_bull",
+      "directions": 4
+    },
+    {
+      "name": "triceratops_cow",
+      "directions": 4
+    }
+  ]
+}

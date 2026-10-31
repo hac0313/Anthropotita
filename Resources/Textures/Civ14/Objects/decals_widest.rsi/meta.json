@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+  "size": {
+    "x": 128,
+    "y": 128
+  },
+  "states": [
+    {
+      "name": "circle",
+      "directions": 4
+    },
+    {
+      "name": "radome"
+    },
+    {
+      "name": "watts_tower"
+    }
+  ]
+}

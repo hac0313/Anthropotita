@@ -1,0 +1,80 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "0"
+        },
+        {
+            "name": "15"
+        },
+        {
+            "name": "5"
+        },
+        {
+            "name": "10"
+        },
+        {
+            "name": "draw"
+        },
+        {
+            "name": "inject"
+        },
+        {
+            "name": "broken"
+        },
+        {
+            "name": "single_use"
+        },
+        {
+            "name": "single_use_empty"
+        },
+        {
+            "name": "single_use1"
+        },
+        {
+            "name": "single_use1_empty"
+        },
+        {
+            "name": "single_use2"
+        },
+        {
+            "name": "single_use2_empty"
+        },
+        {
+            "name": "single_use3"
+        },
+        {
+            "name": "single_use3_empty"
+        },
+        {
+            "name": "single_use0"
+        },
+        {
+            "name": "single_use0_empty"
+        },
+        {
+            "name": "single_use4"
+        },
+        {
+            "name": "single_use4_empty"
+        },
+        {
+            "name": "single_use5"
+        },
+        {
+            "name": "single_use5_empty"
+        },
+        {
+            "name": "single_use6"
+        },
+        {
+            "name": "single_use6_empty"
+        }
+    ]
+}

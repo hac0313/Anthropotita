@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+  "size": {
+    "x": 96,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "horse",
+      "directions": 4
+    },
+    {
+      "name": "horse_dead"
+    },
+    {
+      "name": "horse_ridingX",
+      "directions": 4
+    },
+    {
+      "name": "horse_ridingX1",
+      "directions": 4
+    },
+    {
+      "name": "horse_riding",
+      "directions": 4
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "cleaner"
+    },
+    {
+      "name": "waffles"
+    },
+    {
+      "name": "plate"
+    },
+    {
+      "name": "snack_bowl"
+    },
+    {
+      "name": "tray"
+    },
+    {
+      "name": "trashbag0"
+    },
+    {
+      "name": "trashbag1"
+    },
+    {
+      "name": "trashbag2"
+    },
+    {
+      "name": "trashbag3"
+    },
+    {
+      "name": "mop"
+    },
+    {
+      "name": "bucket"
+    },
+    {
+      "name": "lid_bucket"
+    },
+    {
+      "name": "steel_bucket"
+    },
+    {
+      "name": "lid_steel_bucket"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+  "size": {
+    "x": 128,
+    "y": 96
+  },
+  "states": [
+    {
+      "name": "mammothX",
+      "directions": 4
+    },
+    {
+      "name": "mammoth",
+      "directions": 4
+    },
+    {
+      "name": "mammoth_dead"
+    },
+    {
+      "name": "rex",
+      "directions": 4
+    },
+    {
+      "name": "rex_dead"
+    }
+  ]
+}

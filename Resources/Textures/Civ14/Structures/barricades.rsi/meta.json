@@ -1,0 +1,72 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-4.0",
+    "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "dirt_wall",
+            "directions": 4
+        },
+        {
+            "name": "rock_barricade",
+            "directions": 4
+        },
+        {
+            "name": "sandbagfull",
+            "directions": 4
+        },
+        {
+            "name": "sandbag",
+            "directions": 4
+        },
+        {
+            "name": "sandbag_66%",
+            "directions": 4
+        },
+        {
+            "name": "sandbag_33%",
+            "directions": 4
+        },
+        {
+            "name": "dirt_wall_66%",
+            "directions": 4
+        },
+        {
+            "name": "dirt_wall_33%",
+            "directions": 4
+        },
+        {
+            "name": "woodbarricade_vertical"
+        },
+        {
+            "name": "woodbarricade_horizontal"
+        },
+        {
+            "name": "sandstone_barricade",
+            "directions": 4
+        },
+        {
+            "name": "barricade"
+        },
+        {
+            "name": "snow_wall",
+            "directions": 4
+        },
+        {
+            "name": "snow_wall_66%",
+            "directions": 4
+        },
+        {
+            "name": "snow_wall_33%",
+            "directions": 4
+        },
+        {
+            "name": "crenelated_wall",
+            "directions": 4
+        }
+    ]
+}

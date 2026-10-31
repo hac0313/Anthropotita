@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": ""
+    },
+    {
+      "name": "none"
+    },
+    {
+      "name": "Pistol Grip"
+    },
+    {
+      "name": "RIfle Wooden Stock"
+    },
+    {
+      "name": "Steel Stock"
+    },
+    {
+      "name": "Carbine Wooden Stock"
+    },
+    {
+      "name": "Folding Stock"
+    },
+    {
+      "name": "Pistol Barrel"
+    },
+    {
+      "name": "Carbine Barrel"
+    },
+    {
+      "name": "Rifle Barrel"
+    },
+    {
+      "name": "Long Rifle Barrel"
+    },
+    {
+      "name": "Air-Cooled Barrel"
+    },
+    {
+      "name": "Open (Belt-Fed)_loaded"
+    },
+    {
+      "name": "Open (Belt-Fed)_unloaded"
+    },
+    {
+      "name": "Large External Magazine_loaded"
+    },
+    {
+      "name": "Large External Magazine_unloaded"
+    },
+    {
+      "name": "External Magazine_loaded"
+    },
+    {
+      "name": "External Magazine_unloaded"
+    },
+    {
+      "name": "Internal Magazine_loaded"
+    },
+    {
+      "name": "Internal Magazine_unloaded"
+    },
+    {
+      "name": "Internal Magazine (Removable)_loaded"
+    },
+    {
+      "name": "Internal Magazine (Removable)_unloaded"
+    },
+    {
+      "name": "Bolt-Action"
+    },
+    {
+      "name": "Bolt-Action_open"
+    },
+    {
+      "name": "Pump-Action"
+    },
+    {
+      "name": "Revolver"
+    },
+    {
+      "name": "Semi-Auto (small)"
+    },
+    {
+      "name": "Semi-Auto (large)"
+    },
+    {
+      "name": "Open-Bolt (small)"
+    },
+    {
+      "name": "Open-Bolt (large)"
+    },
+    {
+      "name": "Dual Selective Fire"
+    },
+    {
+      "name": "Triple Selective Fire"
+    }
+  ]
+}

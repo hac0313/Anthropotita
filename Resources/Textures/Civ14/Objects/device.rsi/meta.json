@@ -1,0 +1,458 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-4.0",
+  "copyright": "Taken from Civilization 13 https://github.com/civ13/civ13",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "",
+      "delays": [
+        [
+          0.120000005,
+          0.120000005,
+          0.120000005,
+          0.120000005
+        ]
+      ]
+    },
+    {
+      "name": "sunflower"
+    },
+    {
+      "name": "telescope0"
+    },
+    {
+      "name": "telescope1"
+    },
+    {
+      "name": "binoculars-old"
+    },
+    {
+      "name": "binoculars"
+    },
+    {
+      "name": "kar_scope"
+    },
+    {
+      "name": "mosin_scope"
+    },
+    {
+      "name": "carcano_scope"
+    },
+    {
+      "name": "turret_control"
+    },
+    {
+      "name": "periscope"
+    },
+    {
+      "name": "laser_designator"
+    },
+    {
+      "name": "geiger_off"
+    },
+    {
+      "name": "geiger_on_1"
+    },
+    {
+      "name": "geiger_on_2",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "geiger_on_3",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "geiger_on_4",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "geiger_on_5",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "pocketwatch"
+    },
+    {
+      "name": "photox"
+    },
+    {
+      "name": "photo"
+    },
+    {
+      "name": "film"
+    },
+    {
+      "name": "camera_early"
+    },
+    {
+      "name": "camera_ww2"
+    },
+    {
+      "name": "camera_coldwar"
+    },
+    {
+      "name": "camera_modern"
+    },
+    {
+      "name": "video_camera",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "telegraph"
+    },
+    {
+      "name": "telegraph_active",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "teleprinter0"
+    },
+    {
+      "name": "teleprinter1"
+    },
+    {
+      "name": "radio_mic1"
+    },
+    {
+      "name": "radio_mic2"
+    },
+    {
+      "name": "radio_mic3"
+    },
+    {
+      "name": "radio_off"
+    },
+    {
+      "name": "recorder"
+    },
+    {
+      "name": "recorder_on",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "machine"
+    },
+    {
+      "name": "machine_on",
+      "delays": [
+        [
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1,
+          0.1
+        ]
+      ]
+    },
+    {
+      "name": "radio_vintage"
+    },
+    {
+      "name": "radio",
+      "directions": 4
+    },
+    {
+      "name": "tankradio",
+      "directions": 4
+    },
+    {
+      "name": "radio_transmitter"
+    },
+    {
+      "name": "celly"
+    },
+    {
+      "name": "cellphone"
+    },
+    {
+      "name": "telephone"
+    },
+    {
+      "name": "telephone_blue"
+    },
+    {
+      "name": "telephone_green"
+    },
+    {
+      "name": "telephone_yellow"
+    },
+    {
+      "name": "intercom-p"
+    },
+    {
+      "name": "intercom"
+    },
+    {
+      "name": "modern_intercom",
+      "directions": 4
+    },
+    {
+      "name": "police_intercom",
+      "directions": 4
+    },
+    {
+      "name": "portable_radio"
+    },
+    {
+      "name": "portable_radio2"
+    },
+    {
+      "name": "portable_radio3"
+    },
+    {
+      "name": "portable_radio_space",
+      "delays": [
+        [
+          0.1,
+          0.25,
+          0.15
+        ]
+      ]
+    },
+    {
+      "name": "radio_headset"
+    },
+    {
+      "name": "walkietalkie"
+    },
+    {
+      "name": "walkietalkie2"
+    },
+    {
+      "name": "walkietalkie2_off"
+    },
+    {
+      "name": "comlink"
+    },
+    {
+      "name": "loudspeaker",
+      "directions": 4
+    },
+    {
+      "name": "mic"
+    },
+    {
+      "name": "mic2"
+    },
+    {
+      "name": "micstand_empty",
+      "directions": 4
+    },
+    {
+      "name": "micstand",
+      "directions": 4
+    },
+    {
+      "name": "micstand2",
+      "directions": 4
+    },
+    {
+      "name": "wall_loudspeaker"
+    },
+    {
+      "name": "tracking",
+      "delays": [
+        [
+          0.4,
+          0.4,
+          0.4,
+          0.4
+        ]
+      ]
+    },
+    {
+      "name": "camerasetup"
+    },
+    {
+      "name": "camera",
+      "directions": 8,
+      "delays": [
+        [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ],
+        [
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8,
+          0.8
+        ]
+      ]
+    },
+    {
+      "name": "camera1",
+      "directions": 8
+    },
+    {
+      "name": "camerax",
+      "directions": 8
+    },
+    {
+      "name": "cameraemp",
+      "directions": 8,
+      "delays": [
+        [
+          0.1,
+          0.02,
+          0.08
+        ],
+        [
+          0.1,
+          0.02,
+          0.08
+        ],
+        [
+          0.1,
+          0.02,
+          0.08
+        ],
+        [
+          0.1,
+          0.02,
+          0.08
+        ],
+        [
+          0.1,
+          0.02,
+          0.08
+        ],
+        [
+          0.1,
+          0.02,
+          0.08
+        ],
+        [
+          0.1,
+          0.02,
+          0.08
+        ],
+        [
+          0.1,
+          0.02,
+          0.08
+        ]
+      ]
+    },
+    {
+      "name": "rc_control"
+    }
+  ]
+}

@@ -1,0 +1,595 @@
+{
+  "version": 1,
+  "license": "AGPL-3.0",
+  "copyright": "From http://github.com/civ13/civ13",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "0",
+      "directions": 1
+    },
+    {
+      "name": "black",
+      "directions": 1
+    },
+    {
+      "name": "brickwall_inc2",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall1C",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall1E",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall1J",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall2C",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall2E",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall2J",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall3C",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall3E",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall3J",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall4C",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall4E",
+      "directions": 1
+    },
+    {
+      "name": "brick_wall4J",
+      "directions": 1
+    },
+    {
+      "name": "b_brick_marble_wall",
+      "directions": 1
+    },
+    {
+      "name": "b_brick_stone_wall",
+      "directions": 1
+    },
+    {
+      "name": "b_cobbled_marble_wall",
+      "directions": 1
+    },
+    {
+      "name": "b_cobbled_stone_wall",
+      "directions": 1
+    },
+    {
+      "name": "b_marble_wall",
+      "directions": 1
+    },
+    {
+      "name": "b_stone_wall",
+      "directions": 1
+    },
+    {
+      "name": "b_tiled_marble_wall",
+      "directions": 1
+    },
+    {
+      "name": "b_tiled_stone_wall",
+      "directions": 1
+    },
+    {
+      "name": "b_wood_wall",
+      "directions": 1
+    },
+    {
+      "name": "cracks1",
+      "directions": 1
+    },
+    {
+      "name": "cracks2",
+      "directions": 1
+    },
+    {
+      "name": "cracks3",
+      "directions": 1
+    },
+    {
+      "name": "dirt_wall",
+      "directions": 1
+    },
+    {
+      "name": "divider0",
+      "directions": 1
+    },
+    {
+      "name": "divider1",
+      "directions": 1
+    },
+    {
+      "name": "divider2",
+      "directions": 1
+    },
+    {
+      "name": "divider3",
+      "directions": 1
+    },
+    {
+      "name": "drydirt_wall",
+      "directions": 1
+    },
+    {
+      "name": "drysod_wall",
+      "directions": 1
+    },
+    {
+      "name": "drysod_wallx",
+      "directions": 1
+    },
+    {
+      "name": "drysod_wall_inc1",
+      "directions": 1
+    },
+    {
+      "name": "drysod_wall_inc2",
+      "directions": 1
+    },
+    {
+      "name": "drysod_wall_inc3",
+      "directions": 1
+    },
+    {
+      "name": "drysod_wall_inc4",
+      "directions": 1
+    },
+    {
+      "name": "egyptian_archway",
+      "directions": 4
+    },
+    {
+      "name": "fortress_brickwall0_alt",
+      "directions": 1
+    },
+    {
+      "name": "fortress_brickwall_archway",
+      "directions": 4
+    },
+    {
+      "name": "gladiator_relief",
+      "directions": 1
+    },
+    {
+      "name": "grecian_archway",
+      "directions": 4
+    },
+    {
+      "name": "grecian_cobbled",
+      "directions": 4
+    },
+    {
+      "name": "grecian_cobbled_b",
+      "directions": 4
+    },
+    {
+      "name": "grecian_pattern",
+      "directions": 4
+    },
+    {
+      "name": "grecian_pattern_b",
+      "directions": 4
+    },
+    {
+      "name": "grecian_smooth",
+      "directions": 4
+    },
+    {
+      "name": "grecian_smooth_b",
+      "directions": 4
+    },
+    {
+      "name": "greek_warrior_relief",
+      "directions": 1
+    },
+    {
+      "name": "icyrocky",
+      "directions": 1
+    },
+    {
+      "name": "igloo_wall",
+      "directions": 1
+    },
+    {
+      "name": "igloo_wall_inc1",
+      "directions": 1
+    },
+    {
+      "name": "igloo_wall_inc2",
+      "directions": 1
+    },
+    {
+      "name": "igloo_wall_inc3",
+      "directions": 1
+    },
+    {
+      "name": "jap_wall_h",
+      "directions": 1
+    },
+    {
+      "name": "jap_wall_h_l",
+      "directions": 1
+    },
+    {
+      "name": "jap_wall_h_r",
+      "directions": 1
+    },
+    {
+      "name": "jap_wall_v",
+      "directions": 1
+    },
+    {
+      "name": "jap_wall_v_b",
+      "directions": 1
+    },
+    {
+      "name": "jap_wall_v_t",
+      "directions": 1
+    },
+    {
+      "name": "large_relief",
+      "directions": 1
+    },
+    {
+      "name": "logwall",
+      "directions": 4
+    },
+    {
+      "name": "logwall_hole",
+      "directions": 4
+    },
+    {
+      "name": "log_wall",
+      "directions": 4
+    },
+    {
+      "name": "log_wall_corner",
+      "directions": 1
+    },
+    {
+      "name": "marble_block_archway",
+      "directions": 4
+    },
+    {
+      "name": "medieval_wall",
+      "directions": 1
+    },
+    {
+      "name": "medieval_wall_x",
+      "directions": 1
+    },
+    {
+      "name": "medieval_wall_y1",
+      "directions": 1
+    },
+    {
+      "name": "medieval_wall_y2",
+      "directions": 1
+    },
+    {
+      "name": "mold1",
+      "directions": 1
+    },
+    {
+      "name": "mold2",
+      "directions": 1
+    },
+    {
+      "name": "mold3",
+      "directions": 1
+    },
+    {
+      "name": "new_brick_inc0",
+      "directions": 1
+    },
+    {
+      "name": "new_stonebrick_archway",
+      "directions": 4
+    },
+    {
+      "name": "new_wood0",
+      "directions": 1
+    },
+    {
+      "name": "old_stone_wall",
+      "directions": 1
+    },
+    {
+      "name": "OLMEDA",
+      "directions": 1
+    },
+    {
+      "name": "OLMEDB",
+      "directions": 1
+    },
+    {
+      "name": "OLMEDM",
+      "directions": 1
+    },
+    {
+      "name": "oriental-door",
+      "directions": 1
+    },
+    {
+      "name": "oriental",
+      "directions": 1
+    },
+    {
+      "name": "orientalb",
+      "directions": 1
+    },
+    {
+      "name": "oriental_threep",
+      "directions": 1
+    },
+    {
+      "name": "oriental_threepb",
+      "directions": 1
+    },
+    {
+      "name": "oriental_twop",
+      "directions": 1
+    },
+    {
+      "name": "oriental_twopb",
+      "directions": 1
+    },
+    {
+      "name": "overlay_damage",
+      "directions": 1
+    },
+    {
+      "name": "redsandstone_block_archway",
+      "directions": 4
+    },
+    {
+      "name": "relief_aquila",
+      "directions": 1
+    },
+    {
+      "name": "relief_aquila_colored",
+      "directions": 1
+    },
+    {
+      "name": "rock",
+      "directions": 1
+    },
+    {
+      "name": "rocky",
+      "directions": 1
+    },
+    {
+      "name": "rock_debris1",
+      "directions": 1
+    },
+    {
+      "name": "rock_debris2",
+      "directions": 1
+    },
+    {
+      "name": "rock_side_e",
+      "directions": 1
+    },
+    {
+      "name": "rock_side_n",
+      "directions": 1
+    },
+    {
+      "name": "rock_side_s",
+      "directions": 1
+    },
+    {
+      "name": "rock_side_w",
+      "directions": 1
+    },
+    {
+      "name": "roman2",
+      "directions": 1
+    },
+    {
+      "name": "Runic_Stone_1",
+      "directions": 1
+    },
+    {
+      "name": "Runic_stone_2",
+      "directions": 1
+    },
+    {
+      "name": "sandstone_block_archway",
+      "directions": 4
+    },
+    {
+      "name": "sandstone_brick",
+      "directions": 1
+    },
+    {
+      "name": "sandstone_brick2",
+      "directions": 1
+    },
+    {
+      "name": "sandstone_brick_c",
+      "directions": 1
+    },
+    {
+      "name": "sandstone_brick_c2",
+      "directions": 1
+    },
+    {
+      "name": "sandstone_cobble",
+      "directions": 1
+    },
+    {
+      "name": "sandstone_smooth",
+      "directions": 1
+    },
+    {
+      "name": "sandyrocky",
+      "directions": 1
+    },
+    {
+      "name": "shoji_wall",
+      "directions": 1
+    },
+    {
+      "name": "shoji_wall2",
+      "directions": 1
+    },
+    {
+      "name": "sod_wall",
+      "directions": 1
+    },
+    {
+      "name": "sovietwall_one",
+      "directions": 4
+    },
+    {
+      "name": "sovietwall_one_c",
+      "directions": 1
+    },
+    {
+      "name": "steeljail",
+      "directions": 4
+    },
+    {
+      "name": "stone_block_archway",
+      "directions": 4
+    },
+    {
+      "name": "stone_brick",
+      "directions": 1
+    },
+    {
+      "name": "stone_brick2",
+      "directions": 1
+    },
+    {
+      "name": "stone_brick_c",
+      "directions": 1
+    },
+    {
+      "name": "stone_brick_c2",
+      "directions": 1
+    },
+    {
+      "name": "stone_wall_classic_design_ugly",
+      "directions": 1
+    },
+    {
+      "name": "straw_wallA1",
+      "directions": 1
+    },
+    {
+      "name": "straw_wallA2",
+      "directions": 1
+    },
+    {
+      "name": "straw_wallB1",
+      "directions": 1
+    },
+    {
+      "name": "straw_wallB2",
+      "directions": 1
+    },
+    {
+      "name": "straw_wallC1",
+      "directions": 1
+    },
+    {
+      "name": "straw_wallC2",
+      "directions": 1
+    },
+    {
+      "name": "straw_wallC3",
+      "directions": 1
+    },
+    {
+      "name": "straw_wallC4",
+      "directions": 1
+    },
+    {
+      "name": "straw_wallh",
+      "directions": 1
+    },
+    {
+      "name": "straw_wallv",
+      "directions": 1
+    },
+    {
+      "name": "tentdoor_closed",
+      "directions": 1
+    },
+    {
+      "name": "tentdoor_open",
+      "directions": 1
+    },
+    {
+      "name": "villa_door",
+      "directions": 4
+    },
+    {
+      "name": "villa_pillared",
+      "directions": 4
+    },
+    {
+      "name": "villa_wall",
+      "directions": 4
+    },
+    {
+      "name": "villa_wall_l_relief",
+      "directions": 4
+    },
+    {
+      "name": "villa_wall_l_relief_aquila",
+      "directions": 4
+    },
+    {
+      "name": "villa_wall_l_relief_gladiator",
+      "directions": 4
+    },
+    {
+      "name": "villa_wall_l_relief_greek",
+      "directions": 4
+    },
+    {
+      "name": "woodjail",
+      "directions": 4
+    },
+    {
+      "name": "wood_mast",
+      "directions": 1
+    }
+  ]
+}
