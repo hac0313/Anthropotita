@@ -26,7 +26,7 @@
       time: 5
 - type: entity
   name: contestant jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_contestant_jacket
   description: A simple green jumpsuit jacket.
   components:
@@ -52,7 +52,7 @@
       time: 5
 - type: entity
   name: black vest
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_black_vest
   description: A simple black vest.
   components:
@@ -78,7 +78,7 @@
       time: 5
 - type: entity
   name: DRA officer jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_DRA_officer_jacket
   description: A military jacket worn by DRA officers.
   components:
@@ -104,7 +104,7 @@
       time: 5
 - type: entity
   name: afghanka coat
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_afghanka_coat
   description: A soviet winter jacket issued and developped in the early 80's.
   components:
@@ -129,7 +129,7 @@
       time: 5
 - type: entity
   name: cafr afghanka coat
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_cafr_afghanka_coat
   description: An Afghanka coat made with the CAFR camouflage pattern.
   components:
@@ -154,7 +154,7 @@
       time: 5
 - type: entity
   name: forensics jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_forensics_jacket
   description: A forensic department jacket.
   components:
@@ -180,7 +180,7 @@
       time: 5
 - type: entity
   name: police bulletproof vest
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_police_bulletproof_vest
   description: A police vest (Level III).
   components:
@@ -206,7 +206,7 @@
       time: 5
 - type: entity
   name: black primitive pelt coat
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_black_primitive_pelt_coat
   description: >-
     A makeshift black pelt coat made from fur skins, worn to protect early man
@@ -236,7 +236,7 @@
       time: 13
 - type: entity
   name: haori jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_haori_jacket
   description: A simple jacket worn over a haori outfit.
   components:
@@ -263,7 +263,7 @@
 
 - type: entity
   name: Abashiri Haori
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_Abashiri_Haori
   description: >-
     A simple haori jacket usually worn over a haori outfit. This one is
@@ -291,7 +291,7 @@
       time: 5
 - type: entity
   name: Abashiri Haori
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_Abashiri_Haori_1
   description: >-
     A simple haori jacket usually worn over a haori outfit. This one is
@@ -319,7 +319,7 @@
       time: 5
 - type: entity
   name: Abashiri Haori
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_Abashiri_Haori_1_2
   description: >-
     A simple haori jacket usually worn over a haori outfit. This one is
@@ -463,7 +463,7 @@
       time: 20
 - type: entity
   name: white labcoat
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_white_labcoat
   description: A white labcoat.
   components:
@@ -516,7 +516,7 @@
       time: 5
 - type: entity
   name: black jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_black_jacket
   description: A long black jacket.
   components:
@@ -534,7 +534,7 @@
       time: 11
 - type: entity
   name: fancy brown jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_fancy_brown_jacket
   description: A fancy jacket. This one is brown.
   components:
@@ -552,7 +552,7 @@
       time: 18
 - type: entity
   name: blue vest
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_blue_vest
   description: A sleeveless vest. This one is blue.
   components:
@@ -570,7 +570,7 @@
       time: 8
 - type: entity
   name: black vest
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_black_vest_1
   description: A sleeveless vest. This one is black.
   components:
@@ -588,7 +588,7 @@
       time: 8
 - type: entity
   name: fancy red jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_fancy_red_jacket
   description: A fancy jacket. This one is red.
   components:
@@ -606,7 +606,7 @@
       time: 18
 - type: entity
   name: royal navy captain jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_royal_navy_captain_jacket
   description: >-
     A standard captain jacket of the royal navy. Blue with golden buttons, white
@@ -626,7 +626,7 @@
       time: 5
 - type: entity
   name: royal navy officer jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_royal_navy_officer_jacket
   description: A standard officer jacket of the royal navy. Blue with golden buttons.
   components:
@@ -644,7 +644,7 @@
       time: 5
 - type: entity
   name: british red jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_british_red_jacket
   description: The british redcoat, used by the british army and marines.
   components:
@@ -662,7 +662,7 @@
       time: 5
 - type: entity
   name: portuguese captain jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_portuguese_captain_jacket
   description: >-
     A standard captain jacket of the portuguese navy. Blue with golden buttons,
@@ -682,7 +682,7 @@
       time: 5
 - type: entity
   name: portuguese officer jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_portuguese_officer_jacket
   description: A standard officer jacket of the portuguese navy. Blue with golden buttons.
   components:
@@ -700,7 +700,7 @@
       time: 5
 - type: entity
   name: spanish captain jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_spanish_captain_jacket
   description: >-
     A standard Captain jacket of the spanish navy. Yellow with golden buttons,
@@ -720,7 +720,7 @@
       time: 5
 - type: entity
   name: spanish officer jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_spanish_officer_jacket
   description: A standard Officer jacket of the spanish navy. Yellow with golden buttons.
   components:
@@ -738,7 +738,7 @@
       time: 5
 - type: entity
   name: spanish soldier jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_spanish_soldier_jacket
   description: A standard jacket of the spanish army. Yellow with red trimming.
   components:
@@ -756,7 +756,7 @@
       time: 5
 - type: entity
   name: french captain jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_french_captain_jacket
   description: >-
     A standard captain jacket of the french navy. White with golden buttons,
@@ -776,7 +776,7 @@
       time: 5
 - type: entity
   name: french officer jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_french_officer_jacket
   description: A standard officer jacket of the french navy. White with golden buttons.
   components:
@@ -794,7 +794,7 @@
       time: 5
 - type: entity
   name: united provinces captain jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_united_provinces_captain_jacket
   description: >-
     A standard captain jacket of the united provinces navy. Orange with golden
@@ -814,7 +814,7 @@
       time: 5
 - type: entity
   name: united provinces officer jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_united_provinces_officer_jacket
   description: >-
     A standard officer jacket of the united provinces navy. Orange with golden
@@ -834,7 +834,7 @@
       time: 5
 - type: entity
   name: united provinces army jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_united_provinces_army_jacket
   description: >-
     A standard army jacket of the united provinces army. Orange with golden
@@ -854,7 +854,7 @@
       time: 5
 - type: entity
   name: spanish army jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_spanish_army_jacket
   description: A standard army jacket of the spanish Army. Yellow with golden buttons.
   components:
@@ -872,7 +872,7 @@
       time: 5
 - type: entity
   name: portuguese army jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_portuguese_army_jacket
   description: A standard army jacket of the portuguese Army. Green with golden buttons.
   components:
@@ -890,7 +890,7 @@
       time: 5
 - type: entity
   name: french army jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_french_army_jacket
   description: A standard army jacket of the french army. White with blue trimmings.
   components:
@@ -908,7 +908,7 @@
       time: 5
 - type: entity
   name: british army jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_british_army_jacket
   description: A standard army jacket of the british army. Red and white.
   components:
@@ -926,7 +926,7 @@
       time: 5
 - type: entity
   name: victorian tailcoat
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_victorian_tailcoat
   description: Also known as a butler suit.
   components:
@@ -980,7 +980,7 @@
       time: 12
 - type: entity
   name: black vest
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_black_vest_1_2
   description: A simple black vest.
   components:
@@ -998,7 +998,7 @@
       time: 8
 - type: entity
   name: olive vest
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_olive_vest
   description: A simple olive vest.
   components:
@@ -1016,7 +1016,7 @@
       time: 8
 - type: entity
   name: blue vest
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_blue_vest_1
   description: A simple blue vest.
   components:
@@ -1034,7 +1034,7 @@
       time: 8
 - type: entity
   name: cream short jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_cream_short_jacket
   description: A cream colored short jacket.
   components:
@@ -1110,7 +1110,7 @@
       time: 14
 - type: entity
   name: motorist jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_motorist_jacket
   description: >-
     A jacket often worn by enthusiasts of vehicles, speed and the smell of
@@ -1135,7 +1135,7 @@
       time: 11
 - type: entity
   name: Russian Federal Forces winter jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_Russian_Federal_Forces_winter_jacket
   description: A winter jacket used by the Russian Federal Forces in VSR93 camo.
   components:
@@ -1159,7 +1159,7 @@
       time: 5
 - type: entity
   name: punk jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_punk_jacket
   description: >-
     A loose jacket often worn by counter-cultural types, commonly additional
@@ -1185,7 +1185,7 @@
       time: 11
 - type: entity
   name: high visibility jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_high_visibility_jacket
   description: A yellow high visibility jacket.
   components:
@@ -1240,7 +1240,7 @@
 
 - type: entity
   name: commissar jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_commissar_jacket
   description: >-
     A red jacket belonging to overzealous leaders of large squadrons of
@@ -1261,7 +1261,7 @@
       time: 5
 - type: entity
   name: inquisitorial jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_inquisitorial_jacket
   description: >-
     A black jacket with red arm stripes belonging to expert investigators of
@@ -1281,7 +1281,7 @@
       time: 5
 - type: entity
   name: inquisitorial jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_inquisitorial_jacket_1
   description: ""
   components:
@@ -1317,7 +1317,7 @@
       time: 5
 - type: entity
   name: elven harlequin jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_elven_harlequin_jacket
   description: >-
     A flamboyant jacket worn by roaming troupes of deadly elven assassins with
@@ -1373,7 +1373,7 @@
       time: 5
 - type: entity
   name: cloth jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_cloth_jacket
   description: A simple cloth jacket.
   components:
@@ -1409,7 +1409,7 @@
       time: 5
 - type: entity
   name: colonial coat
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_colonial_coat
   description: A colonial coat of the XVIIIth century.
   components:
@@ -1427,7 +1427,7 @@
       time: 12
 - type: entity
   name: colonial jacket
-  parent: ClothingOuterBase
+  parent: ClothingOuterStorageBase
   id: civ13_suit_colonial_jacket
   description: A colonial jacket of the XVIIIth century.
   components:
