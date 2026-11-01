@@ -209,6 +209,9 @@
 - type: Tag
   id: BypassOpenStorageLimit # Tagged entities can open several storage UIs at once (Aghost).
 
+- type: Tag
+  id: Burnable # Marks an entity as combustible/fuel-able. Used by GrillFuelBurnSystem for campfire fuel.
+
 ## C ##
 
 - type: Tag
@@ -216,6 +219,9 @@
 
 - type: Tag
   id: Cake # CargoBounty blacklist: BountyFruit, BountyVegetable
+
+- type: Tag
+  id: Compostable # Marks an entity as compostable/fertilizer. Used by Civ14 farming systems.
 
 - type: Tag
   id: Candle # Storage whitelist: BoxCandle
@@ -458,6 +464,9 @@
 
 ## D ##
 
+- type: Tag
+  id: decorative # Used by Civ14 decals.
+
 - type: Tag # Exists on diagonal walls and windows
   id: Diagonal # Used by TileWallsCommand and FixRotationsCommand
 
@@ -573,6 +582,9 @@
 
 - type: Tag
   id: Figurine # Storage whitelist: BooksBag, BorgModuleService. CargoBounty: BountyFigurine
+
+- type: Tag
+  id: flora # Used by Civ14 flora prototypes.
 
 - type: Tag
   id: FinishedMeal # Storage whitelist: BorgModuleCooking
@@ -1216,6 +1228,9 @@
 
 - type: Tag
   id: RawMaterial # MaterialStorage whitelist for many machines and lathes. Storage whitelist: MaterialBag
+
+- type: Tag
+  id: road # Used by Civ14 road decals.
 
 # Give this to something that doesn't need any special recycler behavior and just needs deleting.
 - type: Tag

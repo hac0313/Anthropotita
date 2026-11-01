@@ -1,0 +1,60 @@
+- type: entity
+  parent: MaterialBase
+  id: BasePoo
+  description: Это действительно ужасно пахнет.
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/pooeffect.rsi
+      layers:
+        - state: poop1
+          map: ["random"]
+    - type: RandomSprite
+      available:
+        - random:
+            poop1: ""
+            poop2: ""
+            poop3: ""
+            poop4: ""
+            poop5: ""
+            poop6: ""
+            poop7: ""
+    - type: Appearance
+    - type: Item
+      sprite: Civ14/Objects/pooeffect.rsi
+      heldPrefix: poo
+
+- type: entity
+  parent: BasePoo
+  id: HumanPoo
+  name: какашки
+
+- type: entity
+  parent: BasePoo
+  id: AnimalPoo
+  name: какашки
+  description: Плохо пахнет и имеет землистый привкус.
+
+- type: entity
+  parent: MaterialBase
+  id: Compost
+  name: компост
+  description: Разложившееся органическое вещество, насыщенное питательными веществами для почвы.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/pooeffect.rsi
+      layers:
+        - state: animalpoo1
+          map: ["random"]
+    - type: RandomSprite
+      available:
+        - random:
+            animalpoo1: ""
+            animalpoo2: ""
+            animalpoo3: ""
+    - type: Compost
+    - type: Tag
+      tags:
+        - Burnable
+    - type: BurnFuel
+      burnTime: 3

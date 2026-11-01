@@ -1,0 +1,49 @@
+- type: entity
+  name: кремень
+  parent: BaseItem
+  id: Flint
+  description: Aмаленький кусочек кремня, пригодный для поделок.
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Civ14/Objects/old_weapons.rsi
+      state: flint
+    - type: Item
+      shape:
+        - 0,0,1,0
+      storedOffset: 0,-6
+    - type: Knapping
+      hitsRequired: 5
+      resultPrototype: SharpenedFlint
+      allowRockKnapping: true
+      hitTime: 2.0
+
+- type: entity
+  name: заточенный кремень
+  parent: BaseItem
+  id: SharpenedFlint
+  description: Заточенный кусок кремня, готовый к использованию.
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Civ14/Objects/old_weapons.rsi
+      state: sharpened_flint
+    - type: Item
+      shape:
+        - 0,0,1,0
+      storedOffset: 0,-6
+    - type: Tag
+      tags:
+        - SharpenedFlint
+    - type: Sharp
+    - type: MeleeWeapon
+      wideAnimationRotation: -135
+      damage:
+        types:
+          Piercing: 6
+      angle: 0
+      animation: WeaponArcThrust
+    - type: DamageOtherOnHit
+      damage:
+        types:
+          Piercing: 4
