@@ -1,0 +1,225 @@
+- type: entity
+  id: Brazier
+  parent: BaseHeaterMachine
+  name: жаровня
+  description: Каменная яма для разведения огня обеспечивает тепло. Можно использовать дрова и мусор.
+  components:
+    - type: Transform
+      anchored: true
+    - type: Sprite
+      noRot: true
+      sprite: Civ14/Objects/structures.rsi
+      layers:
+        - state: s_brazier0
+        - map: ["enum.EntityHeaterVisuals.Setting"]
+          shader: unshaded
+          visible: false
+    - type: PointLight
+      enabled: false
+      radius: 6
+      energy: 5
+      color: "#E25822"
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.08,-0.35,0.15,0.25"
+          mask:
+            - TabletopMachineMask
+          layer:
+            - Impassable
+            - MidImpassable
+            - LowImpassable
+          hard: true
+    - type: ApcPowerReceiver
+      needsPower: false
+      powerLoad: 0
+    - type: ItemPlacer
+      maxEntities: 2
+      whitelist:
+        components:
+          - Temperature
+    - type: GrillFuelBurn
+      fuel: 0
+      maxFuel: 60
+      warmRadius: 5
+      expends: false
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: Metallic
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 200
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: AmbientSound
+      volume: -5
+      range: 5
+      sound:
+        path: /Audio/Ambience/Objects/fireplace.ogg
+    - type: Construction
+      graph: Brazier
+      node: end
+      agemin: 0
+      agemax: 8
+    - type: GenericVisualizer
+      visuals:
+        enum.EntityHeaterVisuals.Setting:
+          enum.EntityHeaterVisuals.Setting:
+            Off: { visible: false }
+            Low: { visible: true, state: s_brazier1 }
+            Medium: { visible: true, state: s_brazier2 }
+            High: { visible: true, state: s_brazier2 }
+
+- type: entity
+  id: StovePotbelly
+  parent: Brazier
+  name: буржуйка
+  description: Железная печка.
+  components:
+    - type: Sprite
+      noRot: true
+      sprite: Civ14/Objects/kitchen.rsi
+      layers:
+        - state: oven_off
+        - map: ["enum.EntityHeaterVisuals.Setting"]
+          shader: unshaded
+          visible: false
+    - type: PointLight
+      enabled: false
+      radius: 4
+      energy: 5
+      color: "#E25822"
+    - type: GrillFuelBurn
+      fuel: 0
+      maxFuel: 80
+      warmRadius: 3
+      expends: false
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 250
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: Construction
+      graph: StovePotbelly
+      node: end
+      agemin: 2
+      agemax: 8
+    - type: GenericVisualizer
+      visuals:
+        enum.EntityHeaterVisuals.Setting:
+          enum.EntityHeaterVisuals.Setting:
+            Off: { visible: false, state: oven_off }
+            Low: { visible: true, state: oven_on }
+            Medium: { visible: true, state: oven_on }
+            High: { visible: true, state: oven_on }
+
+- type: entity
+  name: факел "тики"
+  parent: Torch
+  id: TikiTorch
+  description: Статический источник света.
+  components:
+    - type: ExpendableLight
+      spentName: expendable-light-burnt-torch-name
+      spentDesc: expendable-light-burnt-torch-desc
+      glowDuration: 600
+      fadeOutDuration: 4
+      iconStateSpent: torch_spent
+      turnOnBehaviourID: turn_on
+      fadeOutBehaviourID: fade_out
+    - type: Sprite
+      sprite: Civ14/Objects/lighting.rsi
+      layers:
+        - map: [enum.ExpendableLightVisualLayers.Base]
+          state: tikitorch
+        - map: [enum.ExpendableLightVisualLayers.Glow]
+          state: tikitorch-on
+          visible: true
+          shader: unshaded
+    - type: Icon
+      sprite: Civ14/Objects/lighting.rsi
+      state: tikitorch
+    - type: Construction
+      graph: TikiTorch
+      node: end
+    - type: PointLight
+      enabled: true
+      color: "#E25822"
+      radius: 3.0
+      energy: 5.0
+      netsync: true
+    - type: Transform
+      anchored: true
+    - type: Physics
+      bodyType: Static
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.5,0.25,0.5"
+          density: 190
+          mask:
+            - MachineMask
+          layer:
+            - MachineLayer
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 40
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+
+- type: entity
+  name: железный фонарь
+  parent: Torch
+  id: IronLantern
+  description: Железный фонарь на топливе.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/lighting.rsi
+      layers:
+        - map: [enum.ExpendableLightVisualLayers.Base]
+          state: lantern
+        - map: [enum.ExpendableLightVisualLayers.Glow]
+          state: lantern-on
+          visible: true
+          shader: unshaded
+    - type: Icon
+      sprite: Civ14/Objects/lighting.rsi
+      state: lantern
+    - type: Construction
+      graph: IronLantern
+      node: end
+    - type: PointLight
+      enabled: true
+      color: "#E25822"
+      radius: 4.0
+      energy: 5.0
+      netsync: true
+    - type: Transform
+      anchored: true
+    - type: Physics
+      bodyType: Static
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.25,0.25,0.25"
+          density: 190
+          mask:
+            - MachineMask
+          layer:
+            - MachineLayer
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 70
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]

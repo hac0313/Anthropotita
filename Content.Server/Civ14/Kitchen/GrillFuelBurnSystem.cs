@@ -6,6 +6,7 @@ using Content.Shared.Kitchen;
 using Content.Shared.Placeable;
 using Content.Shared.Stacks;
 using Content.Shared.Temperature;
+using Content.Shared.Audio;
 using Robust.Server.Audio;
 using Robust.Shared.Timing;
 using System.Linq;
@@ -24,7 +25,8 @@ public sealed class GrillFuelBurnSystem : EntitySystem
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly SharedStackSystem _stackSystem = default!;
 
-    [Dependency] private readonly SharedPointLightSystem _pointLightSystem = default!;
+    [Dependency] private readonly SharedAmbientSoundSystem _ambientSound = default!;
+[Dependency] private readonly SharedPointLightSystem _pointLightSystem = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
 
     public override void Initialize()
@@ -40,6 +42,7 @@ public sealed class GrillFuelBurnSystem : EntitySystem
     {
         component.IsLit = false;
         AdjustHeaterSetting(uid, component);
+        _ambientSound.SetAmbience(uid, false);
     }
 
     private void OnItemPlaced(EntityUid uid, GrillFuelBurnComponent comp, ref ItemPlacedEvent args)
@@ -194,6 +197,9 @@ public sealed class GrillFuelBurnSystem : EntitySystem
         {
             Log.Warning($"No PointLightComponent found for campfire {uid}");
         }
+
+        // Toggle ambient sound based on whether the heater is lit.
+        _ambientSound.SetAmbience(uid, setting != EntityHeaterSetting.Off);
     }
     private void AdjustHeaterSetting(EntityUid uid, GrillFuelBurnComponent comp)
     {
