@@ -1,0 +1,201 @@
+- type: entity
+  name: целебные травы
+  description: Пучок целебных трав, собранных с кустов. Помогает при ожогах и поверхностных ранах.
+  parent: BaseHealingItem
+  id: HealingHerbs
+  suffix: Single
+  components:
+    - type: Tag
+      tags:
+        - Ointment
+    - type: Sprite
+      sprite: Civ14/Objects/surgery.rsi
+      state: healing_herbs
+    - type: Item
+      heldPrefix: regenerative-mesh
+    - type: Healing
+      damageContainers:
+        - Biological
+      damage:
+        types:
+          Heat: -8
+          Cold: -8
+          Shock: -8
+          Caustic: -8
+        groups:
+          Brute: -6
+      healingBeginSound:
+        path: "/Audio/Items/Medical/ointment_begin.ogg"
+      healingEndSound:
+        path: "/Audio/Items/Medical/ointment_end.ogg"
+    - type: StaticPrice
+      price: 20
+    - type: Produce
+      seedId: HealingHerbs
+    - type: Stack
+      stackType: StackHealingHerbs
+      count: 1
+
+- type: entity
+  name: тысячелистник лекарственный
+  description: Тысячелистник является коагулянтом и при применении помогает уменьшить кровотечение.
+  parent: BaseHealingItem
+  id: YarrowHealingHerbs
+  suffix: Single
+  components:
+    - type: Tag
+      tags:
+        - Ointment
+    - type: Sprite
+      sprite: Civ14/Objects/Farming/yarrow.rsi
+      state: produce
+    - type: Item
+      heldPrefix: regenerative-mesh
+    - type: Healing
+      damageContainers:
+        - Biological
+      damage:
+        types:
+          Bloodloss: -24
+      healingBeginSound:
+        path: "/Audio/Items/Medical/ointment_begin.ogg"
+      healingEndSound:
+        path: "/Audio/Items/Medical/ointment_end.ogg"
+    - type: StaticPrice
+      price: 20
+    - type: Produce
+      seedId: YarrowHerbs
+    - type: Stack
+      stackType: StackYarrowHealingHerbs
+      count: 1
+- type: entity
+  name: лекарственный окопник
+  description: Исторически окопник использовался для заживления ушибов благодаря своим противовоспалительным свойствам и свойствам восстанавливать ткани. Заживляет серьезные повреждения.
+  parent: BaseHealingItem
+  id: ComfreyHealingHerbs
+  suffix: Single
+  components:
+    - type: Tag
+      tags:
+        - Ointment
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/spacemans_trumpet.rsi
+      state: produce
+    - type: Item
+      heldPrefix: regenerative-mesh
+    - type: Healing
+      damageContainers:
+        - Biological
+      damage:
+        groups:
+          Brute: -10
+      healingBeginSound:
+        path: "/Audio/Items/Medical/ointment_begin.ogg"
+      healingEndSound:
+        path: "/Audio/Items/Medical/ointment_end.ogg"
+    - type: StaticPrice
+      price: 20
+    - type: Produce
+      seedId: ComfreyHerbs
+    - type: Stack
+      stackType: StackComfreyHealingHerbs
+      count: 1
+- type: entity
+  name: лекарственная расторопша пятнистая
+  description: Расторопша издавна используется как тонизирующее средство для печени. Лечит отравления.
+  parent: BaseHealingItem
+  id: MilkThistleHealingHerbs
+  suffix: Single
+  components:
+    - type: Tag
+      tags:
+        - Ointment
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/galaxythistle.rsi
+      state: produce
+    - type: Item
+      heldPrefix: regenerative-mesh
+    - type: Healing
+      damageContainers:
+        - Biological
+      damage:
+        types:
+          Poison: -12
+      healingBeginSound:
+        path: "/Audio/Items/Medical/ointment_begin.ogg"
+      healingEndSound:
+        path: "/Audio/Items/Medical/ointment_end.ogg"
+    - type: StaticPrice
+      price: 20
+    - type: Produce
+      seedId: MilkThistleHerbs
+    - type: Stack
+      stackType: StackMilkThistleHealingHerbs
+      count: 1
+- type: entity
+  name: лекарственный цветок бузины
+  description: Цветок бузины уменьшает удушье, очищая дыхательные пути и увеличивая потребление кислорода.
+  parent: BaseHealingItem
+  id: ElderflowerHealingHerbs
+  suffix: Single
+  components:
+    - type: Tag
+      tags:
+        - Ointment
+    - type: Sprite
+      sprite: Civ14/Objects/Farming/elderflower.rsi
+      state: produce
+    - type: Item
+      heldPrefix: regenerative-mesh
+    - type: Healing
+      damageContainers:
+        - Biological
+      damage:
+        types:
+          Asphyxiation: -16
+      healingBeginSound:
+        path: "/Audio/Items/Medical/ointment_begin.ogg"
+      healingEndSound:
+        path: "/Audio/Items/Medical/ointment_end.ogg"
+    - type: StaticPrice
+      price: 20
+    - type: Produce
+      seedId: ElderflowerHerbs
+    - type: Stack
+      stackType: StackElderflowerHealingHerbs
+      count: 1
+
+- type: stack
+  id: StackElderflowerHealingHerbs
+  name: цветок бузины
+  icon: { sprite: /Textures/Civ14/Objects/Farming/elderflower.rsi, state: produce }
+  spawn: ElderflowerHealingHerbs
+  maxCount: 10
+
+- type: stack
+  id: StackMilkThistleHealingHerbs
+  name: расторопша пятнистая
+  icon: { sprite: /Textures/Objects/Specific/Hydroponics/galaxythistle.rsi, state: produce }
+  spawn: MilkThistleHealingHerbs
+  maxCount: 10
+
+- type: stack
+  id: StackComfreyHealingHerbs
+  name: окопник
+  icon: { sprite: /Textures/Objects/Specific/Hydroponics/spacemans_trumpet.rsi, state: produce }
+  spawn: ComfreyHealingHerbs
+  maxCount: 10
+
+- type: stack
+  id: StackYarrowHealingHerbs
+  name: тысячелистник
+  icon: { sprite: /Textures/Civ14/Objects/Farming/yarrow.rsi, state: produce }
+  spawn: YarrowHealingHerbs
+  maxCount: 10
+
+- type: stack
+  id: StackHealingHerbs
+  name: целебные травы
+  icon: { sprite: /Textures/Civ14/Objects/surgery.rsi, state: healing_herbs }
+  spawn: HealingHerbs
+  maxCount: 10

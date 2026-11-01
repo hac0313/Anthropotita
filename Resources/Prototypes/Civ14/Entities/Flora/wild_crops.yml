@@ -1,0 +1,346 @@
+- type: entity
+  name: wild plant
+  parent: BaseStructure
+  abstract: true
+  id: WildPlantBase
+  description: A small patch of wild crop, its irregular leaves hinting at a hidden blend of cultivated varieties, yet it thrives untamed in nature.
+  suffix: Structure
+  components:
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.17,0,0.20,0.4"
+    - type: Transform
+      anchored: true
+    - type: Damageable
+      damageContainer: StructuralInorganic
+      damageModifierSet: Wood
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 80
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+
+- type: entity
+  name: wild plant
+  parent: WildPlantBase
+  id: WildPlantPotato
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/potato.rsi
+      state: harvest
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:NestedSelector
+          tableId: PotatoWildHarvest
+
+- type: entityTable
+  id: PotatoWildHarvest
+  table: !type:AllSelector
+    children:
+    - !type:EntSelector
+      id: FoodPotato
+      amount: 1
+    - !type:EntSelector
+      id: PotatoSeedsCiv
+      amount: 1
+
+- type: entity
+  name: wild plant
+  parent: WildPlantBase
+  id: WildPlantCorn
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/corn.rsi
+      state: harvest
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:NestedSelector
+          tableId: CornWildHarvest
+
+- type: entityTable
+  id: CornWildHarvest
+  table: !type:AllSelector
+    children:
+    - !type:EntSelector
+      id: FoodCorn
+      amount: 1
+    - !type:EntSelector
+      id: CornSeedsCiv
+      amount: 1
+
+- type: entity
+  name: wild plant
+  parent: WildPlantBase
+  id: WildPlantRice
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/rice.rsi
+      state: harvest
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:NestedSelector
+          tableId: RiceWildHarvest
+
+- type: entityTable
+  id: RiceWildHarvest
+  table: !type:AllSelector
+    children:
+    - !type:EntSelector
+      id: RiceBushel
+      amount: 1
+    - !type:EntSelector
+      id: RiceSeedsCiv
+      amount: 1
+
+- type: entity
+  name: wild plant
+  parent: WildPlantBase
+  id: WildPlantWheat
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/wheat.rsi
+      state: harvest
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:NestedSelector
+          tableId: WheatWildHarvest
+
+- type: entityTable
+  id: WheatWildHarvest
+  table: !type:AllSelector
+    children:
+    - !type:EntSelector
+      id: WheatBushel
+      amount: 1
+    - !type:EntSelector
+      id: WheatSeedsCiv
+      amount: 1
+
+- type: entity
+  name: wild plant
+  parent: WildPlantBase
+  id: WildPlantHemp
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/Farming/hemp.rsi
+      state: harvest
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:NestedSelector
+          tableId: HempWildHarvest
+
+- type: entityTable
+  id: HempWildHarvest
+  table: !type:AllSelector
+    children:
+    - !type:EntSelector
+      id: HempSeedsCiv
+      amount: 1
+    - !type:EntSelector
+      id: MaterialRope1
+      amount: 1
+
+- type: entity
+  name: healing plant
+  parent: WildPlantBase
+  id: WildPlantHealing
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/aloe.rsi
+      state: harvest
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:NestedSelector
+          tableId: HealingHerbsHarvest
+
+- type: entityTable
+  id: HealingHerbsHarvest
+  table: !type:AllSelector
+    children:
+    - !type:EntSelector
+      id: HealingHerbsItem
+      amount: "2,3"
+
+- type: entity
+  name: wild yarrow
+  parent: WildPlantBase
+  id: WildPlantYarrow
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/Farming/yarrow.rsi
+      state: harvest
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:NestedSelector
+          tableId: YarrowHarvest
+
+- type: entityTable
+  id: YarrowHarvest
+  table: !type:AllSelector
+    children:
+    - !type:EntSelector
+      id: YarrowHealingHerbs
+      amount: "2,3"
+    - !type:EntSelector
+      id: YarrowSeedsCiv
+      amount: "2,2"
+
+- type: entity
+  name: wild milk thistle
+  parent: WildPlantBase
+  id: WildPlantMilkThistle
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/galaxythistle.rsi
+      state: harvest
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:NestedSelector
+          tableId: MilkThistleHarvest
+
+- type: entityTable
+  id: MilkThistleHarvest
+  table: !type:AllSelector
+    children:
+    - !type:EntSelector
+      id: MilkThistleHealingHerbs
+      amount: "2,3"
+    - !type:EntSelector
+      id: MilkThistleSeedsCiv
+      amount: "2,2"
+
+- type: entity
+  name: wild elderflower
+  parent: WildPlantBase
+  id: WildPlantElderflower
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/Farming/elderflower.rsi
+      state: harvest
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:NestedSelector
+          tableId: ElderflowerHarvest
+
+- type: entityTable
+  id: ElderflowerHarvest
+  table: !type:AllSelector
+    children:
+    - !type:EntSelector
+      id: ElderflowerHealingHerbs
+      amount: "2,3"
+    - !type:EntSelector
+      id: ElderflowerSeedsCiv
+      amount: "2,2"
+
+- type: entity
+  name: wild comfrey
+  parent: WildPlantBase
+  id: WildPlantComfrey
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/spacemans_trumpet.rsi
+      state: harvest
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:NestedSelector
+          tableId: ComfreyHarvest
+
+- type: entityTable
+  id: ComfreyHarvest
+  table: !type:AllSelector
+    children:
+    - !type:EntSelector
+      id: ComfreyHealingHerbs
+      amount: "2,3"
+    - !type:EntSelector
+      id: ComfreySeedsCiv
+      amount: "2,2"
+
+- type: entity
+  name: wild poppy
+  parent: WildPlantBase
+  id: WildPlantPoppy
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/poppy.rsi
+      state: harvest
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:NestedSelector
+          tableId: PoppyHarvest
+
+- type: entityTable
+  id: PoppyHarvest
+  table: !type:AllSelector
+    children:
+    - !type:EntSelector
+      id: FoodPoppy
+      amount: "1,2"
+    - !type:EntSelector
+      id: PoppySeedsCiv
+      amount: "2,2"
+
+- type: entity
+  name: wild aloe vera
+  parent: WildPlantBase
+  id: WildPlantAloe
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/aloe.rsi
+      state: harvest
+    - type: Gatherable
+      toolWhitelist:
+        components:
+          - Hands
+      loot:
+        All: !type:NestedSelector
+          tableId: AloeHarvest
+
+- type: entityTable
+  id: AloeHarvest
+  table: !type:AllSelector
+    children:
+    - !type:EntSelector
+      id: FoodAloe
+      amount: "1,3"
+    - !type:EntSelector
+      id: AloeSeedsCiv
+      amount: "2,2"

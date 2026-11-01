@@ -1,0 +1,49 @@
+- type: entity
+  name: ветка
+  parent: BaseItem
+  id: LeafedStick
+  description: Ветка с дерева, на ней несколько листьев.
+  suffix: Single
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Civ14/Objects/old_weapons.rsi
+      state: leaved_stick
+    - type: Item
+      shape:
+        - 0,0,1,0
+      storedOffset: 0,-6
+    - type: Sharpenable
+      sharpenTime: 5.0
+      resultPrototype: SharpenedStick
+      canSharpenByHand: true
+
+- type: entity
+  name: заостренная палка
+  parent: BaseItem
+  id: SharpenedStick
+  description: Заостренная палочка, готовая к использованию.
+  components:
+    - type: Sprite
+      netsync: false
+      sprite: Civ14/Objects/old_weapons.rsi
+      state: sharpened_stick
+    - type: Item
+      shape:
+        - 0,0,1,0
+      storedOffset: 0,-6
+    - type: Tag
+      tags:
+        - SharpenedStick
+    - type: Sharp
+    - type: MeleeWeapon
+      wideAnimationRotation: -135
+      damage:
+        types:
+          Piercing: 8
+      angle: 0
+      animation: WeaponArcThrust
+    - type: DamageOtherOnHit
+      damage:
+        types:
+          Piercing: 8

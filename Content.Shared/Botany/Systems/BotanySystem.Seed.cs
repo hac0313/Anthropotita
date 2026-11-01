@@ -80,7 +80,7 @@ public sealed partial class BotanySystem : EntitySystem
         if (snapshot != null && TryComp(snapshot, out plant))
             return true;
 
-        if (plantProtoId == null)
+        if (plantProtoId == null || string.IsNullOrEmpty(plantProtoId.Value.Id))
             return false;
 
         if (!ProtoMan.TryIndex(plantProtoId.Value, out var proto))

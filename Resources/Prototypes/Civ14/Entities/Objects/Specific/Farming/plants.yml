@@ -1,0 +1,153 @@
+- type: entity
+  parent: BasePlant
+  id: HealingHerbsItem
+  name: целебные травы
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/aloe.rsi
+    - type: PlantData
+      name: целебные травы
+      noun: seeds-noun-seeds
+      packetPrototype: HealingHerbsSeedsCiv
+      productPrototypes:
+        - HealingHerbsItem
+        - HealingHerbsSeedsCiv
+    - type: Plant
+      lifespan: 25
+      maturation: 10
+      production: 3
+      yield: 2
+      potency: 10
+      growthStages: 5
+    - type: PlantGrowth
+      waterConsumption: 0.60
+    - type: PlantChemicals
+      chemicals:
+        Dermaline:
+          Min: 1
+          Max: 10
+          PotencyDivisor: 10
+        Bicaridine:
+          Min: 1
+          Max: 10
+          PotencyDivisor: 10
+
+- type: entity
+  parent: BasePlant
+  id: ComfreyHerbs
+  name: окопник
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/spacemans_trumpet.rsi
+    - type: PlantData
+      name: окопник
+      noun: seeds-noun-seeds
+      packetPrototype: ComfreySeedsCiv
+      productPrototypes:
+        - ComfreyHealingHerbsItem
+        - ComfreySeedsCiv
+    - type: Plant
+      lifespan: 20
+      maturation: 8
+      production: 3
+      yield: 2
+      potency: 10
+      growthStages: 4
+    - type: PlantGrowth
+      waterConsumption: 0.60
+    - type: PlantChemicals
+      chemicals:
+        Bruizine:
+          Min: 1
+          Max: 10
+          PotencyDivisor: 10
+
+- type: entity
+  parent: BasePlant
+  id: YarrowHerbs
+  name: тысячелистник
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/Farming/yarrow.rsi
+    - type: PlantData
+      name: тысячелистник
+      noun: seeds-noun-seeds
+      packetPrototype: YarrowSeedsCiv
+      productPrototypes:
+        - YarrowHealingHerbsItem
+        - YarrowSeedsCiv
+    - type: Plant
+      lifespan: 20
+      maturation: 8
+      production: 3
+      yield: 2
+      potency: 10
+      growthStages: 5
+    - type: PlantGrowth
+      waterConsumption: 0.60
+    - type: PlantChemicals
+      chemicals:
+        TranexamicAcid:
+          Min: 1
+          Max: 10
+          PotencyDivisor: 10
+
+- type: entity
+  parent: BasePlant
+  id: ElderflowerHerbs
+  name: цветок бузины
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/Farming/elderflower.rsi
+    - type: PlantData
+      name: цветок бузины
+      noun: seeds-noun-seeds
+      packetPrototype: ElderflowerSeedsCiv
+      productPrototypes:
+        - ElderflowerHealingHerbsItem
+        - ElderflowerSeedsCiv
+    - type: Plant
+      lifespan: 22
+      maturation: 10
+      production: 3
+      yield: 2
+      potency: 10
+      growthStages: 5
+    - type: PlantGrowth
+      waterConsumption: 0.60
+    - type: PlantChemicals
+      chemicals:
+        Dexalin:
+          Min: 1
+          Max: 10
+          PotencyDivisor: 10
+
+- type: entity
+  parent: BasePlant
+  id: MilkThistleHerbs
+  name: расторопша пятнистая
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/galaxythistle.rsi
+    - type: PlantData
+      name: расторопша пятнистая
+      noun: seeds-noun-seeds
+      packetPrototype: MilkThistleSeedsCiv
+      productPrototypes:
+        - MilkThistleHealingHerbsItem
+        - MilkThistleSeedsCiv
+    - type: Plant
+      lifespan: 15
+      maturation: 6
+      production: 3
+      yield: 2
+      potency: 10
+      growthStages: 3
+    - type: PlantGrowth
+      waterConsumption: 0.60
+    - type: PlantChemicals
+      chemicals:
+        Dylovene:
+          Min: 1
+          Max: 10
+          PotencyDivisor: 10

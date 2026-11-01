@@ -1,0 +1,110 @@
+- type: entity
+  id: KitchenMill
+  parent: [BaseMachinePowered, SmallConstructibleMachine]
+  name: маленькая мельница
+  description: Небольшая мельница с ручным приводом.
+  suffix: mill
+  components:
+    - type: Animateable
+    - type: InteractionOutline
+    - type: ApcPowerReceiver
+      needsPower: false
+      powerLoad: 0
+    - type: Anchorable
+      delay: 2
+    - type: ReagentGrinder
+    - type: ActivatableUI
+      key: enum.ReagentGrinderUiKey.Key
+    - type: UserInterface
+      interfaces:
+        enum.ReagentGrinderUiKey.Key:
+          type: ReagentGrinderBoundUserInterface
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.ReagentGrinderVisualState.BeakerAttached:
+          grinder:
+            True: { state: "flour_mill" }
+            False: { state: "flour_mill" }
+    - type: Physics
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.17,0,0.20,0.4"
+          mask:
+            - TabletopMachineMask
+          layer:
+            - TabletopMachineLayer
+    - type: Sprite
+      sprite: Civ14/Objects/structures.rsi
+      drawdepth: SmallObjects
+      snapCardinals: true
+      offset: "0.0,0.4"
+      layers:
+        - map: ["grinder"]
+          state: "flour_mill"
+    - type: ItemSlots
+      slots:
+        beakerSlot:
+          whitelist:
+            components:
+              - FitsInDispenser
+    - type: ContainerContainer
+      containers:
+        beakerSlot: !type:ContainerSlot
+        inputContainer: !type:Container
+    - type: Construction
+      node: end
+      agemin: 0
+      agemax: 8
+
+- type: entity
+  id: KitchenCampfire
+  parent: BaseHeaterMachine
+  name: костер
+  description: Согревает вас и готовит вашу еду.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/kitchen.rsi
+      drawdepth: SmallObjects
+      snapCardinals: true
+      layers:
+        - state: fireplace
+        - map: ["enum.EntityHeaterVisuals.Setting"]
+          shader: unshaded
+          visible: false
+    - type: Appearance
+    - type: ApcPowerReceiver
+      needsPower: false
+      powerLoad: 0
+    - type: PointLight
+      enabled: false
+      radius: 4
+      energy: 4
+      color: "#E25822"
+    - type: GrillFuelBurn
+      fuel: 2
+      maxFuel: 30
+      warmRadius: 2
+    - type: PlaceableSurface
+    - type: ItemPlacer
+      maxEntities: 2
+      whitelist:
+        components:
+          - Temperature
+    - type: GenericVisualizer
+      visuals:
+        enum.EntityHeaterVisuals.Setting:
+          enum.EntityHeaterVisuals.Setting:
+            Off: { visible: false }
+            Low: { visible: true, state: fireplace3 }
+            Medium: { visible: true, state: fireplace2 }
+            High: { visible: true, state: fireplace_on }
+    - type: GuideHelp
+      guides:
+        - FoodRecipes
+    - type: Construction
+      node: end
+      agemin: 0
+      agemax: 8

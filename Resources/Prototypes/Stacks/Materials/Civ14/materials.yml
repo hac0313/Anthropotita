@@ -1,0 +1,83 @@
+- type: stack
+  id: Straw
+  name: straw
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: straw }
+  spawn: MaterialStraw1
+  maxCount: 30
+
+- type: stack
+  id: Leather
+  name: leather
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: leather }
+  spawn: MaterialLeather1
+  maxCount: 30
+
+- type: stack
+  id: PeltBrownBear
+  name: brown bear pelt
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: sheet-brownbearpelt }
+  spawn: MaterialPeltBrownBear1
+  maxCount: 30
+
+- type: stack
+  id: PeltGreyWolf
+  name: grey wolf pelt
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: sheet-wolfpelt }
+  spawn: MaterialPeltGreyWolf1
+  maxCount: 30
+
+- type: stack
+  id: Clay
+  name: clay
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: claylump }
+  spawn: MaterialClay1
+  maxCount: 40
+
+- type: stack
+  id: Stone
+  name: stone
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: stone }
+  spawn: MaterialStone1
+  maxCount: 25
+
+- type: stack
+  id: Sandstone
+  name: sandstone
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: sheet-sandstone }
+  spawn: MaterialSandstone1
+  maxCount: 20
+
+- type: stack
+  id: Sand
+  name: sand
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: sheet-sand }
+  spawn: MaterialSand1
+  maxCount: 20
+
+- type: stack
+  id: Rope
+  name: rope
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: rope }
+  spawn: MaterialRope1
+  maxCount: 50
+
+- type: stack
+  id: Dirt
+  name: dirt
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: dirt_pile }
+  spawn: MaterialDirt1
+  maxCount: 20
+
+- type: stack
+  id: Barbwire
+  name: barbed wire
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: barbwire_stack }
+  spawn: MaterialBarbwire1
+  maxCount: 5
+
+- type: stack
+  id: Sandbags
+  name: sandbags
+  icon: { sprite: /Textures/Civ14/Objects/items.rsi, state: sandbag_new }
+  spawn: MaterialSandbags1
+  maxCount: 1
