@@ -3443,7 +3443,7 @@
       time: 5
 - type: entity
   name: Жилет М79 армии США
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_US_Army_M79_Vest
   description: A large webbing with several small pockets.
   components:
@@ -3670,7 +3670,7 @@
       time: 5
 - type: entity
   name: TATBA-7 vest
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_TATBA_7_vest
   description: Chinese light plate carrier, comes with a single plate inserted.
   components:
@@ -3687,7 +3687,7 @@
       time: 5
 - type: entity
   name: 6B3 body armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_6B3_body_armor
   description: A ballistic vest of Soviet origin, issued in the mid 1980s.
   components:
@@ -3726,7 +3726,7 @@
       time: 5
 - type: entity
   name: 6B2 body armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_6B2_body_armor
   description: A ballistic vest of Soviet origin, issued in the early 1980s.
   components:
@@ -3750,7 +3750,7 @@
       time: 5
 - type: entity
   name: 6B5 body armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_6B5_body_armor
   description: A ballistic vest of Soviet origin, issued in the late 1980s.
   components:
@@ -3774,7 +3774,7 @@
       time: 5
 - type: entity
   name: N34-B body armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_N34_B_body_armor
   description: >-
     A modern piece of Blugoslavian armor introduced in 2023, made fully out of
@@ -3807,7 +3807,7 @@
 
 - type: entity
   name: black Interceptor Body Armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_black_Interceptor_Body_Armor
   description: >-
     Wearable armor that can stop even some rifle rounds. Can be fitted with
@@ -3833,7 +3833,7 @@
       time: 5
 - type: entity
   name: UCP Interceptor Body Armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_UCP_Interceptor_Body_Armor
   description: >-
     Wearable armor that can stop even some rifle rounds. Can be fitted with
@@ -3860,7 +3860,7 @@
       time: 5
 - type: entity
   name: OCP Interceptor Body Armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_OCP_Interceptor_Body_Armor
   description: >-
     Wearable armor that can stop even some rifle rounds. Can be fitted with
@@ -3887,7 +3887,7 @@
       time: 5
 - type: entity
   name: tan plate carrier
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_tan_plate_carrier
   description: A plate carrier that can store magazines and pouches. This one is tan.
   components:
@@ -3911,7 +3911,7 @@
       time: 5
 - type: entity
   name: olive plate carrier
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_olive_plate_carrier
   description: A plate carrier that can store magazines and pouches. This one is olive.
   components:
@@ -3935,7 +3935,7 @@
       time: 5
 - type: entity
   name: black plate carrier
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_black_plate_carrier
   description: A plate carrier that can store magazines and pouches. This one is black.
   components:
@@ -3959,7 +3959,7 @@
       time: 5
 - type: entity
   name: UARM plate carrier
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_UARM_plate_carrier
   description: >-
     A plate carrier that can store magazines and pouches. This one is made by
@@ -3985,7 +3985,7 @@
       time: 5
 - type: entity
   name: 6B45 body armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_6B45_body_armor
   description: A modern body armor of Russian origin.
   components:
@@ -4009,7 +4009,7 @@
       time: 5
 - type: entity
   name: 6B45 extended body armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_6B45_extended_body_armor
   description: A modern body armor of Russian origin.
   components:
@@ -4033,7 +4033,7 @@
       time: 5
 - type: entity
   name: 6B46 body armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_6B46_body_armor
   description: >-
     A modern plate carrier of Russian origin. This one is used by paratroopers
@@ -4097,7 +4097,7 @@
       time: 5
 - type: entity
   name: 6B1 vest
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_6B1_vest
   description: >-
     Wearable Armor meant to protect against shrapnel and light caliber weaponry.
@@ -4123,7 +4123,7 @@
       time: 5
 - type: entity
   name: woodland PASGT body armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_woodland_PASGT_body_armor
   description: >-
     Wearable armor that can stop most pistol rounds. This one is in U.S.
@@ -4183,7 +4183,7 @@
       time: 5
 - type: entity
   name: RB-23 body armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_RB_23_body_armor
   description: A modern ballistic vest of Redmenian origin.
   components:
@@ -4207,7 +4207,7 @@
       time: 5
 - type: entity
   name: Masada body armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_Masada_body_armor
   description: Israeli wearable armor that can stop most pistol rounds. This one is green.
   components:
@@ -4347,7 +4347,7 @@
       time: 5
 - type: entity
   name: black carrier vest
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_black_carrier_vest
   description: A kevlar vest with pouches, it is black.
   components:
@@ -4371,7 +4371,7 @@
       time: 5
 - type: entity
   name: heavy carrier vest
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_heavy_carrier_vest
   description: A tan carrier vest for holding various items.
   components:
@@ -4395,7 +4395,7 @@
       time: 5
 - type: entity
   name: black kevlar vest
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_black_kevlar_vest
   description: Standard kevlar, can stop low caliber bullets. This one is black.
   components:
@@ -4419,7 +4419,7 @@
       time: 5
 - type: entity
   name: civilian kevlar vest
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_civilian_kevlar_vest
   description: A black kevlar vest for commercial use.
   components:
@@ -4442,7 +4442,7 @@
       time: 21
 - type: entity
   name: Press kevlar vest
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_Press_kevlar_vest
   description: A blue kevlar vest, with 'PRESS' written across the chest.
   components:
@@ -4466,7 +4466,7 @@
       time: 5
 - type: entity
   name: baily vest
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_baily_vest
   description: A vest used by baily security units.
   components:
@@ -4483,7 +4483,7 @@
       time: 5
 - type: entity
   name: IOG heavy vest B-7
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_IOG_heavy_vest_B_7
   description: A heavy suit made of strong materials.
   components:
@@ -4500,7 +4500,7 @@
       time: 5
 - type: entity
   name: Breastplate body-armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_Breastplate_body_armor
   description: Wearable armor made of steel sheets.
   components:
@@ -4525,7 +4525,7 @@
       time: 5
 - type: entity
   name: Light breastplate body-armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_Light_breastplate_body_armor
   description: Wearable light armor made of steel sheets.
   components:
@@ -4550,7 +4550,7 @@
       time: 5
 - type: entity
   name: Lead breastplate body-armor
-  parent: ClothingNeckBase
+  parent: ClothingOuterBase
   id: civ13_accessory_Lead_breastplate_body_armor
   description: Wearable breastplate armor made out of steel sheets and lead.
   components:
