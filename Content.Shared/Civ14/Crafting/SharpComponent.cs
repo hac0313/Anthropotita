@@ -10,4 +10,22 @@ public sealed partial class SharpComponent : Component
     /// </summary>
     [DataField]
     public bool Sharp = true;
+
+    /// <summary>
+    /// Whether this item has been used as a surgery tool.
+    /// </summary>
+    [DataField]
+    public bool HadSurgeryTool;
+
+    /// <summary>
+    /// Whether this item has been used as a scalpel.
+    /// </summary>
+    [DataField]
+    public bool HadScalpel;
+
+    /// <summary>
+    /// Whether this item has been used as a bone saw.
+    /// </summary>
+    [DataField]
+    public bool HadBoneSaw;
 }
