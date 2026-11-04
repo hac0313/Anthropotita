@@ -6,7 +6,6 @@
 
 using Content.Shared.Body.Components;
 using Content.Shared.Body;
-using Content.Shared.Body.Part;
 using Content.Shared.Body.Events;
 using Content.Shared.Humanoid;
 using Robust.Shared.GameStates;
