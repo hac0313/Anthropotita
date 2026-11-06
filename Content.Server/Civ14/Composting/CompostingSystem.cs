@@ -1,0 +1,159 @@
+using Content.Shared.Composting;
+using Content.Shared.Examine;
+using Content.Shared.Hands.Components;
+using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Interaction;
+using Content.Shared.Popups;
+using Content.Shared.Tag;
+using Content.Shared.Destructible;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
+using System.Linq;
+
+namespace Content.Server.Composting;
+
+public sealed partial class CompostingSystem : EntitySystem
+{
+    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] private readonly SharedHandsSystem _hands = default!;
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly TagSystem _tag = default!;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+        SubscribeLocalEvent<CompostingComponent, InteractUsingEvent>(OnInteractUsing);
+        SubscribeLocalEvent<CompostingComponent, InteractHandEvent>(OnInteractHand);
+        SubscribeLocalEvent<CompostingComponent, ExaminedEvent>(OnExamined);
+        SubscribeLocalEvent<CompostingComponent, DestructionEventArgs>(OnDestroyed);
+    }
+
+    /// <summary>
+    /// Handles inserting a compostable item into the composter.
+    /// </summary>
+    private void OnInteractUsing(EntityUid uid, CompostingComponent component, InteractUsingEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        var item = args.Used;
+        if (!IsCompostable(item, component))
+        {
+            _popup.PopupEntity($"This item cannot be used to make {component.OutputName}.", uid, args.User);
+            return;
+        }
+
+        // Calculates actual load inside (composting + ready compost)
+        var currentLoad = component.CompostingItems.Count + component.ReadyCompost;
+        if (currentLoad >= component.MaxCapacity)
+        {
+            _popup.PopupEntity("It wont fit.", uid, args.User);
+            return;
+        }
+
+        // Add item to composting process and delete it from the world
+        component.CompostingItems[item] = _gameTiming.CurTime + TimeSpan.FromMinutes(component.CompostTime);
+        QueueDel(item);
+        _popup.PopupEntity("You add the item.", uid, args.User);
+        args.Handled = true;
+    }
+
+    /// <summary>
+    /// Checks if an item is compostable based on its tags.
+    /// </summary>
+    private bool IsCompostable(EntityUid item, CompostingComponent component)
+    {
+        return _tag.HasAnyTag(item, component.Whitelist);
+    }
+
+    /// <summary>
+    /// Handles collecting finished compost with an empty hand.
+    /// </summary>
+    private void OnInteractHand(EntityUid uid, CompostingComponent component, InteractHandEvent args)
+    {
+        if (args.Handled || component.ReadyCompost <= 0)
+            return;
+
+        // Spawn compost and try to place it in the player's hand
+        var compost = Spawn(component.OutputPrototype, Transform(uid).MapPosition);
+        if (_hands.TryPickupAnyHand(args.User, compost))
+        {
+            component.ReadyCompost--;
+            _popup.PopupEntity($"You collect a unit of {component.OutputName}.", uid, args.User);
+        }
+        else
+        {
+            _popup.PopupEntity("Your hands are full.", uid, args.User);
+        }
+        args.Handled = true;
+    }
+
+    /// <summary>
+    /// Updates composting progress and converts finished items to ready compost.
+    /// </summary>
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        var query = EntityQueryEnumerator<CompostingComponent>();
+        while (query.MoveNext(out var uid, out var component))
+        {
+            var currentTime = _gameTiming.CurTime;
+            var toRemove = new List<EntityUid>();
+
+            foreach (var (item, endTime) in component.CompostingItems)
+            {
+                if (currentTime >= endTime)
+                {
+                    toRemove.Add(item);
+                    component.ReadyCompost++;
+                }
+            }
+
+            foreach (var item in toRemove)
+            {
+                component.CompostingItems.Remove(item);
+            }
+        }
+    }
+
+    /// <summary>
+    /// Displays the amount of ready compost when examining the composter.
+    /// </summary>
+    /// <summary>
+    /// Displays the status of the compost bin when examined.
+    /// </summary>
+    private void OnExamined(EntityUid uid, CompostingComponent component, ExaminedEvent args)
+    {
+        if (!args.IsInDetailsRange)
+            return;
+
+        var compostingCount = component.CompostingItems.Count;
+        var readyCompost = component.ReadyCompost;
+
+        if (compostingCount == 0 && readyCompost == 0)
+        {
+            args.PushMarkup("It's empty.");
+            return;
+        }
+
+        if (compostingCount > 0)
+        {
+            args.PushMarkup($"Its currently processing.");
+        }
+
+        if (readyCompost > 0)
+        {
+            args.PushMarkup($"There are {readyCompost} units of {component.OutputName} ready.");
+        }
+    }
+
+    private void OnDestroyed(EntityUid uid, CompostingComponent component, DestructionEventArgs args)
+    {
+        // Drops all ready compost
+        for (int i = 0; i < component.ReadyCompost; i++)
+        {
+            Spawn(component.OutputPrototype, Transform(uid).MapPosition);
+        }
+    }
+}
