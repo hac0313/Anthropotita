@@ -22,34 +22,4 @@ public sealed partial class OrganComponent : Component
     /// </summary>
     [DataField]
     public ProtoId<OrganCategoryPrototype>? Category;
-
-    /// <summary>
-    /// Components to add when this organ is inserted into a body.
-    /// </summary>
-    [DataField]
-    public ComponentRegistry? OnAdd;
-
-    /// <summary>
-    /// Components to remove when this organ is removed from a body.
-    /// </summary>
-    [DataField]
-    public ComponentRegistry? OnRemove;
-
-    /// <summary>
-    /// Whether this organ is currently enabled/functional.
-    /// </summary>
-    [DataField]
-    public bool Enabled = true;
-
-    /// <summary>
-    /// The slot ID this organ occupies in the body.
-    /// </summary>
-    [DataField]
-    public string? SlotId;
-
-    /// <summary>
-    /// The original body this organ belonged to, if any.
-    /// </summary>
-    [DataField]
-    public EntityUid? OriginalBody;
 }

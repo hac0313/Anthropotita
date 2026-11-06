@@ -6,7 +6,7 @@ namespace Content.Shared.Farming;
 [Serializable, NetSerializable]
 public sealed partial class CompostDoAfterEvent : DoAfterEvent
 {
-    public NetEntity Used { get; }
+    public new NetEntity Used { get; }
 
     public CompostDoAfterEvent(NetEntity used)
     {
