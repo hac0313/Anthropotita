@@ -4,6 +4,8 @@ using Robust.Shared.Player;
 using Content.Shared.Antag;
 using Content.Shared.StatusIcon.Components;
 
+using Content.Shared.Overlays;
+
 namespace Content.Shared.Revolutionary;
 
 public sealed partial class RevolutionarySystem : EntitySystem
