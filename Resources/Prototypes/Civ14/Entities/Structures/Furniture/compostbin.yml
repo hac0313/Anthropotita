@@ -1,0 +1,54 @@
+- type: entity
+  id: CompostBin
+  parent: BaseStructure
+  name: "мусорное ведро для компоста"
+  description: Деревянный ящик, используемый для превращения мусора и обрезков в удобрение.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/structures.rsi
+      state: compostbin
+    - type: Appearance
+    - type: Damageable
+      damageModifierSet: Wood
+      damageContainer: StructuralInorganic
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 30
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: WoodDestroyHeavy
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                MaterialWoodPlank:
+                  min: 2
+                  max: 3
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: Tag
+      tags:
+        - Structure
+        - Wooden
+    - type: Transform
+      anchored: true
+    - type: Physics
+      bodyType: Static
+    - type: Anchorable
+    - type: Pullable
+    - type: InteractionOutline
+    - type: Composting
+      whitelist:
+        - Fruit
+        - Egg
+        - Meat
+        - Bread
+        - Pizza
+        - Cheese
+        - Compostable
+      compostTime: 10.0
+    - type: Construction
+      agemin: 0
+      agemax: 8
+      graph: CompostBin
+      node: end

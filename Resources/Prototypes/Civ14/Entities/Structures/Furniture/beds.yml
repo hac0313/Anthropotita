@@ -1,0 +1,90 @@
+- type: entity
+  parent: [BaseStructure, BaseFoldable]
+  id: BedRoll
+  name: лежанка
+  description: Удобный и портативный.
+  components:
+    - type: Appearance
+    - type: Foldable
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.4,0.25,0.1"
+          density: 20
+          mask:
+            - ItemMask
+    - type: Sprite
+      sprite: Civ14/Objects/items.rsi
+      layers:
+        - state: bedroll_o
+          map: ["unfoldedLayer"]
+        - state: bedroll_r
+          map: ["foldedLayer"]
+          visible: false
+    - type: Strap
+      position: Down
+      rotation: -90
+      buckleOffset: "0,-0.10"
+    - type: Pullable
+    - type: MovedByPressure
+    - type: Physics
+      bodyType: Dynamic
+    - type: Transform
+      anchored: false
+      noRot: true
+    - type: GenericVisualizer
+      visuals:
+        enum.FoldedVisuals.State:
+          foldedLayer:
+            True: { visible: true }
+            False: { visible: false }
+          unfoldedLayer:
+            True: { visible: false }
+            False: { visible: true }
+    - type: HealOnBuckle
+      damage:
+        types:
+          Poison: -0.1
+          Blunt: -0.1
+    - type: Clickable
+    - type: InteractionOutline
+    - type: STWeight
+      self: 5
+    - type: Item
+      size: Large
+    - type: Construction
+      graph: BedRollPrim14
+      node: bedroll
+
+- type: entity
+  name: кровать для зоны сна
+  id: SleepZoneBed
+  parent: Bed
+
+- type: entity
+  name: кровать
+  id: BedCivPadding
+  parent: Bed
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/bed_chair.rsi
+      state: bed_padding
+
+- type: entity
+  name: полевая кровать
+  id: BedCivField
+  parent: Bed
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/bed_chair.rsi
+      state: fieldbed
+
+- type: entity
+  name: гамак
+  id: BedCivHammock
+  parent: Bed
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/bed_chair.rsi
+      state: hammockf
