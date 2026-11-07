@@ -1,0 +1,500 @@
+- type: entity
+  name: Базовая штурмовая винтовка
+  parent: BaseGunCiv
+  id: BaseGunCivAR
+  suffix: AR
+  description: Штурмовая винтовка.
+  abstract: true
+  components:
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/ak101.rsi
+      quickEquip: false
+      slots:
+        - Back
+    - type: GunRequiresWield
+    - type: Item
+      size: Large
+      shape:
+        - 0,0,5,1
+    - type: Sprite
+      layers:
+        - state: icon
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-0
+          map: ["enum.GunVisualLayers.Mag"]
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          priority: 3
+          insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        gun_chamber:
+          name: Chamber
+          priority: 1
+          startingItem: civ13_caliber_a762x39
+          whitelist:
+            tags:
+              - civ13_caliber_a762x39
+    - type: ContainerContainer
+      containers:
+        gun_magazine: !type:ContainerSlot
+        gun_chamber: !type:ContainerSlot
+    - type: Gun
+      projectileSpeed: 30
+      minAngle: 2 # 52 - 50
+      maxAngle: 75 # 125 - 50
+      angleIncrease: 6
+      angleDecay: 25
+      fireRate: 4
+      selectedMode: SemiAuto
+      availableModes:
+        - FullAuto
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/AKM.ogg
+    - type: ChamberMagazineAmmoProvider
+      boltClosed: true
+      soundRack:
+        path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+    - type: MagazineVisuals
+      magState: mag
+      steps: 1
+      zeroVisible: true
+
+# imported
+- type: entity
+  name: StG-44
+  parent: BaseGunCivAR
+  id: civ13_ar_StG_44
+  description: Немецкая штурмовая винтовка калибра 7.92x33мм Курц, 30-зарядный магазин.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/stg.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/stg.rsi
+    - type: Gun
+      projectileSpeed: 28 # 7.92 Kurz is a bit slower
+      fireRate: 4.7 # ~500 RPM
+      minAngle: 2 # 50 - 50 = 0, set to 2 (more controllable than base AK which is 2)
+      maxAngle: 60 # 110 - 50
+      angleIncrease: 5.0
+      angleDecay: 27
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/stg.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_StG_44_magazine_(7.92x33mm)
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_StG_44_magazine_(7.92x33mm)
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a792x33
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a792x33
+- type: entity
+  name: "H&K G3"
+  parent: BaseGunCivAR
+  id: "civ13_ar_H&K_G3"
+  description: Немецкая боевая винтовка калибра 7.62x51мм.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/g3.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/g3.rsi
+    - type: Gun
+      projectileSpeed: 32 # Full power 7.62 NATO
+      fireRate: 4.8 # ~500-600 RPM
+      minAngle: 10 # 60 - 50
+      maxAngle: 100 # 150 - 50
+      angleIncrease: 8.0
+      angleDecay: 20 # Slower recoil recovery
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/battle_rifle.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_G3_magazine_(7.62x51mm)
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_G3_magazine_(7.62x51mm)
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a762x51
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a762x51
+
+- type: entity
+  name: FN Fal
+  parent: BaseGunCivAR
+  id: civ13_ar_FN_Fal
+  description: Бельгийская боевая винтовка калибра 7.62x51мм.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/fal.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/fal.rsi
+    - type: Gun
+      projectileSpeed: 32 # Full power 7.62 NATO
+      fireRate: 5.5 # ~650-700 RPM
+      minAngle: 12 # 62 - 50
+      maxAngle: 110 # 160 - 50
+      angleIncrease: 8.5
+      angleDecay: 18 # Hard to control on full auto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/fnfal.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_FN_Fal_magazine_(7.62x51mm)
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_FN_Fal_magazine_(7.62x51mm)
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a762x51
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a762x51
+
+- type: entity
+  name: FN SCAR-L
+  parent: BaseGunCivAR
+  id: civ13_ar_FN_SCAR_L
+  description: Бельгийская штурмовая винтовка калибра 5.56x45мм.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/scar.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/scar.rsi
+    - type: Gun
+      projectileSpeed: 30 # Standard 5.56
+      fireRate: 5.5 # ~550-650 RPM
+      minAngle: 1 # 45 - 50 = -5, set to 1 (Very controllable)
+      maxAngle: 45 # 95 - 50
+      angleIncrease: 4.0
+      angleDecay: 30 # Recovers quickly
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/M4A1.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_STANAG_magazine_(5.56x45mm)
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_STANAG_magazine_(5.56x45mm)
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a556x45
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a556x45
+
+- type: entity
+  name: FN SCAR-H
+  parent: BaseGunCivAR
+  id: civ13_ar_FN_SCAR_H
+  description: Бельгийская автоматическая винтовка калибра 7.62x51мм.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/scar.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/scar.rsi
+    - type: Gun
+      projectileSpeed: 32 # Full power 7.62 NATO
+      fireRate: 5.2 # ~600 RPM
+      minAngle: 5 # 55 - 50
+      maxAngle: 80 # 130 - 50
+      angleIncrease: 7.0
+      angleDecay: 22
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/M14.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_SCAR_H_magazine_(7.62x51mm)
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_SCAR_H_magazine_(7.62x51mm)
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a762x51
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a762x51
+
+- type: entity
+  name: M14
+  parent: BaseGunCivAR
+  id: civ13_ar_M14
+  description: Американская боевая винтовка калибра 7.62x51мм.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/m14.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/m14.rsi
+    - type: Gun
+      projectileSpeed: 32 # Full power 7.62 NATO
+      fireRate: 6.8 # ~700-750 RPM, very fast for caliber
+      minAngle: 15 # 65 - 50
+      maxAngle: 120 # 170 - 50
+      angleIncrease: 9.5 # Difficult to control
+      angleDecay: 17 # Slowest recoil recovery
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/M14Alt.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_M14_magazine_(7.62x51mm)
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_M14_magazine_(7.62x51mm)
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a762x51
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a762x51
+
+- type: entity
+  name: QBZ-95
+  parent: BaseGunCivAR
+  id: civ13_ar_QBZ_95
+  description: Китайская bullpup-штурмовая винтовка калибра 5.8x42мм.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/qbz95.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/qbz95.rsi
+    - type: Gun
+      projectileSpeed: 30 # 5.8x42mm, similar to other intermediate
+      fireRate: 5.3 # ~650 RPM
+      minAngle: 2 # 46 - 50 = -4, set to 2 (Good control for a bullpup)
+      maxAngle: 40 # 90 - 50
+      angleIncrease: 4.2
+      angleDecay: 29
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/M14.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_QBZ_95_magazine_(5.8x42mm)
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_QBZ_95_magazine_(5.8x42mm)
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a58x42
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a58x42
+
+- type: entity
+  name: M2 carbine
+  parent: BaseGunCivAR
+  id: civ13_ar_M2_carbine
+  description: >-
+      Американская карабина с селективным огнём, использующая 7.62x33мм (бесфланцевый
+      .30 Carbine) патроны в внешнем магазине.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/mcar.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/mcar.rsi
+    - type: Gun
+      projectileSpeed: 25 # .30 Carbine, lower velocity
+      fireRate: 6.5 # ~750 RPM
+      minAngle: 1 # 40 - 50 = -10, set to 1 (Low recoil round)
+      maxAngle: 30 # 80 - 50
+      angleIncrease: 3.5
+      angleDecay: 30
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/Garand.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_M1_Carbine_Small_magazine_(7.62x33mm)
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_M1_Carbine_Small_magazine_(7.62x33mm)
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a762x33
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a762x33
+- type: entity
+  name: SR-3
+  parent: BaseGunCivAR
+  id: civ13_ar_SR_3
+  description: Российский компактный карабина калибра 9x39мм, комплектуется компактным прикладом.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/srm.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/srm.rsi
+    - type: Gun
+      projectileSpeed: 22 # 9x39mm subsonic, heavy
+      fireRate: 7.5 # ~900 RPM, very fast
+      minAngle: 2 # 48 - 50 = -2, set to 2 (Manageable)
+      maxAngle: 50 # 100 - 50
+      angleIncrease: 5.0 # Will climb on full auto
+      angleDecay: 27
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/PPSh.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_SR_3_magazine_(9x39mm)
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_SR_3_magazine_(9x39mm)
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x39
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x39
+- type: entity
+  name: L85A2
+  parent: BaseGunCivAR
+  id: civ13_ar_L85A2
+  description: >-
+      L85A2 (также известная как SA80) — служебная винтовка, состоящая на вооружении
+      Великобритании с 1987 года. По дизайну это bullpup-винтовка, очень компактная,
+      при этом с относительно длинным стволом. Рассчитана на патроны 5.56x45мм.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/l85a2.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/l85a2.rsi
+    - type: Gun
+      projectileSpeed: 30 # 5.56x45mm
+      fireRate: 6.2 # ~700 RPM
+      minAngle: 2 # 44 - 50 = -6, set to 2 (Good control A2)
+      maxAngle: 38 # 88 - 50
+      angleIncrease: 3.9
+      angleDecay: 31
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/M4A1.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_STANAG_magazine_(5.56x45mm)
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_STANAG_magazine_(5.56x45mm)
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a556x45
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a556x45
+- type: entity
+  name: Steyr AUG
+  parent: BaseGunCivAR
+  id: civ13_ar_Steyr_AUG
+  description: >-
+      Steyr AUG — австрийская bullpup-штурмовая винтовка, разработанная в 1960-х годах
+      компанией Steyr-Daimler-Puch. Рассчитана на патроны 5.56x45мм.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/aug.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/aug.rsi
+    - type: Gun
+      projectileSpeed: 30 # 5.56x45mm
+      fireRate: 6.4 # ~720 RPM
+      minAngle: 1 # 43 - 50 = -7, set to 1 (Excellent control for a bullpup)
+      maxAngle: 35 # 85 - 50
+      angleIncrease: 3.7
+      angleDecay: 32
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/M4A1.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_STANAG_magazine_(5.56x45mm)
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_STANAG_magazine_(5.56x45mm)
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a556x45
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a556x45
+- type: entity
+  name: "HK417"
+  parent: BaseGunCivAR
+  id: civ13_ar_HK417
+  description: A modern German battle rifle, chambered in 7.62x51mm.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/hk417.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/hk417.rsi
+    - type: Gun
+      projectileSpeed: 32 # 7.62x51mm NATO
+      fireRate: 5.0 # ~600 RPM
+      minAngle: 6 # 56 - 50
+      maxAngle: 85 # 135 - 50
+      angleIncrease: 7.2 # Noticeable climb
+      angleDecay: 23 # Good recovery
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/battle_rifle.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_G3_magazine_(7.62x51mm)
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_G3_magazine_(7.62x51mm)
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a762x51
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a762x51

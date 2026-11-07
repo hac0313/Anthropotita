@@ -471,6 +471,9 @@
   id: Diagonal # Used by TileWallsCommand and FixRotationsCommand
 
 - type: Tag
+  id: Wall # Used by walls and wall-like structures for targeting, pathing, and recipes
+
+- type: Tag
   id: Diamond # CargoBounty: BountySalvageDiamond
 
 - type: Tag

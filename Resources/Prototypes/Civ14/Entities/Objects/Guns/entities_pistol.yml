@@ -1,0 +1,1107 @@
+- type: entity
+  name: BasePistolCiv
+  parent: BaseWeaponPistol
+  id: civ13_pistol
+  abstract: true
+  description: Standard issue pistol. Chambered in 9x19mm.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/m9beretta.rsi
+      layers:
+        - state: icon
+          map:
+            - enum.GunVisualLayers.Base
+        - state: mag-0
+          map:
+            - enum.GunVisualLayers.Mag
+    - type: Clothing
+      sprite: Objects/Weapons/Guns/Pistols/viper.rsi
+      quickEquip: true
+      slots:
+        - suitStorage
+        - Belt
+    - type: Gun
+      projectileSpeed: 20
+      minAngle: 5
+      maxAngle: 50
+      angleIncrease: 5
+      angleDecay: 25
+      fireRate: 3
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/9mm.ogg
+    - type: ChamberMagazineAmmoProvider
+      boltClosed: true
+      soundRack:
+        path: /Audio/Weapons/Guns/Cock/pistol_cock.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+          insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+    - type: MagazineVisuals
+      magstate: mag
+      steps: 1
+      zeroVisible: true
+
+- type: entity
+  name: Type 14 Nambu
+  parent: civ13_pistol
+  id: civ13_pistol_Type_14_Nambu
+  description: Standard issue Japanese pistol. Chambered in 8x22mm Nambu.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/nambu_ww2.rsi
+    - type: Clothing
+      sprite: Civ14/Weapons/Guns/nambu_ww2.rsi
+    - type: Gun
+      projectileSpeed: 18 # 8mm Nambu is weaker
+      minAngle: 4
+      maxAngle: 45
+      angleIncrease: 4.2
+      angleDecay: 28
+      fireRate: 4 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/Nambu.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_c8mmnambu
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_c8mmnambu
+- type: entity
+  name: Luger P08
+  parent: civ13_pistol
+  id: civ13_pistol_Luger_P08
+  description: A Luger P08 chambered in 9x19mm parabellum, german design.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/luger.rsi
+    - type: Gun
+      projectileSpeed: 20 # 9mm
+      minAngle: 6 # Older design, slightly more kick
+      maxAngle: 52
+      angleIncrease: 5.5
+      angleDecay: 24
+      fireRate: 4 # ~100 rpm, Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/9mm.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_Luger_magazine
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_Luger_magazine
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+- type: entity
+  name: Walther P38
+  parent: civ13_pistol
+  id: civ13_pistol_Walther_P38
+  description: A Walther P38 chambered in 9x19mm parabellum, german design.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/waltherp38.rsi
+    - type: Gun
+      projectileSpeed: 20 # 9mm
+      minAngle: 5
+      maxAngle: 50
+      angleIncrease: 5.2 # Solid, but older than Glock
+      angleDecay: 25
+      fireRate: 4.5 # ~100-200 rpm, no info on internet about this. Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/9mm.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+- type: entity
+  name: Glock 17
+  parent: civ13_pistol
+  id: civ13_pistol_Glock_17
+  description: A modern pistol, loaded on 9x19mm, reliable and fast.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/glock17.rsi
+    - type: Gun
+      projectileSpeed: 20
+      minAngle: 5
+      maxAngle: 50
+      angleIncrease: 5
+      angleDecay: 25 # Base Glock 17 stats
+      fireRate: 5 # Semi-auto pistol
+      availableModes:
+        - SemiAuto
+      selectedMode: SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/9mm.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+- type: entity
+  name: SIG 250
+  parent: civ13_pistol
+  id: civ13_pistol_SIG_250
+  description: A modern pistol, loaded on 9x19mm, reliable and fast.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/sig250.rsi
+    - type: Gun
+      projectileSpeed: 20 # 9mm
+      minAngle: 5
+      maxAngle: 48 # Modern, good control
+      angleIncrease: 4.8
+      angleDecay: 26
+      fireRate: 5 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/pistol.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+- type: entity
+  name: PL-14
+  parent: civ13_pistol
+  id: civ13_pistol_PL_14
+  description: A modern experimental pistol made by Kalashnikov (chambered in 9x19mm).
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/pl14.rsi
+    - type: Gun
+      projectileSpeed: 20 # 9mm
+      minAngle: 4 # Experimental, very good control
+      maxAngle: 40
+      angleIncrease: 3.5
+      angleDecay: 30
+      fireRate: 6 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/pistol.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+- type: entity
+  name: MP-443 Grach
+  parent: civ13_pistol
+  id: civ13_pistol_MP_443_Grach
+  description: A Russian made pistol firing loaded on 9x19mm.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/mp443.rsi
+    - type: Gun
+      projectileSpeed: 20 # 9mm
+      minAngle: 5 # Standard modern 9mm
+      maxAngle: 50
+      angleIncrease: 5
+      angleDecay: 25
+      fireRate: 5 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/pistol.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+- type: entity
+  name: Tarus G3
+  parent: civ13_pistol
+  id: civ13_pistol_Tarus_G3
+  description: A modern pistol, loaded on 9x19mm, reliable and fast.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/tarusg3.rsi
+    - type: Gun
+      projectileSpeed: 20 # 9mm
+      minAngle: 5
+      maxAngle: 48 # Modern, good control
+      angleIncrease: 4.8
+      angleDecay: 26
+      fireRate: 5 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/pistol.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+- type: entity
+  name: SIG Sauer P220
+  parent: civ13_pistol
+  id: civ13_pistol_SIG_Sauer_P220
+  description: The SIG Sauer P220 is a semi-automatic pistol. Designed in 1975.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/p220.rsi
+    - type: Gun
+      projectileSpeed: 18 # .45 ACP - slower, heavier
+      minAngle: 8 # More kick
+      maxAngle: 60
+      angleIncrease: 7
+      angleDecay: 20
+      fireRate: 4.2 # Semi-auto pistol, big caliber won't let you shoot too fast
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/45ACP.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a45
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a45
+- type: entity
+  name: IOQ B-72
+  parent: civ13_pistol
+  id: civ13_pistol_IOQ_B_72
+  description: Some fake shit invented by Re1taz.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/iogb7.rsi
+    - type: Gun
+      projectileSpeed: 20 # 9mm
+      minAngle: 10 # "Fake shit" - very high RoF, wild recoil
+      maxAngle: 70
+      angleIncrease: 8
+      angleDecay: 22
+      fireRate: 9 # Already present
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/pistol.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+- type: entity
+  name: Mauser C96
+  parent: civ13_pistol
+  id: civ13_pistol_Mauser_C96
+  description: An early German pistol that can chamber 7.62x25mm TT.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/mauser.rsi
+    - type: Gun
+      projectileSpeed: 22 # 7.62x25mm - fast round
+      minAngle: 7
+      maxAngle: 55 # Noticeable kick, old design
+      angleIncrease: 6
+      angleDecay: 23
+      fireRate: 5 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/762x25.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a762x25
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a762x25
+- type: entity
+  name: Borchardt C93
+  parent: civ13_pistol
+  id: civ13_pistol_Borchardt_C93
+  description: A German semi-automatic pistol chambered in 7.65x25mm Borchardt.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/borchardt.rsi
+    - type: Gun
+      projectileSpeed: 19 # 7.65x25mm Borchardt - less powerful than Mauser
+      minAngle: 6
+      maxAngle: 50
+      angleIncrease: 5.5
+      angleDecay: 24
+      fireRate: 5 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/762x25.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a765x25
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a765x25
+- type: entity
+  name: Colt M1903 Pocket Hammerless
+  parent: civ13_pistol
+  id: civ13_pistol_Colt_M1903_Pocket_Hammerless
+  description: An early, compact Colt pistol chambered in .32 ACP.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/coltpockethammerless.rsi
+    - type: Gun
+      projectileSpeed: 17 # .32 ACP - weak
+      minAngle: 3
+      maxAngle: 35 # Very low recoil
+      angleIncrease: 3.5
+      angleDecay: 30
+      fireRate: 5 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/32ACP.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a32acp
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a32acp
+- type: entity
+  name: Colt M1908 Pocket Hammerless
+  parent: civ13_pistol
+  id: civ13_pistol_Colt_M1908_Pocket_Hammerless
+  description: A later version of the compact Colt pistol, chambered in .380 ACP.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/coltpockethammerless.rsi
+    - type: Gun
+      projectileSpeed: 18 # .380 ACP
+      minAngle: 4
+      maxAngle: 40 # Low recoil
+      angleIncrease: 4
+      angleDecay: 28
+      fireRate: 3.5 # Single-action
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/9mm.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a380acp
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a380acp
+- type: entity
+  name: Bergmann No.2
+  parent: civ13_pistol
+  id: civ13_pistol_Bergmann_No.2
+  description: A particularly unique-in-appearance early German semi-automatic pistol.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/bergmann.rsi
+    - type: Gun
+      projectileSpeed: 18 # Using 8mm Nambu stats as per chamber/sound
+      minAngle: 4
+      maxAngle: 45
+      angleIncrease: 4.2
+      angleDecay: 28
+      fireRate: 4 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/Nambu.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_c8mmnambu
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_c8mmnambu
+- type: entity
+  name: M1911A1
+  parent: civ13_pistol
+  id: civ13_pistol_M1911A1
+  description: >-
+    The standard issue pistol of the US Armed forces from 1911 to 1985.
+    Chambered in .45 ACP.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/colt.rsi
+    - type: Gun
+      projectileSpeed: 18 # .45 ACP
+      minAngle: 8
+      maxAngle: 60 # Classic .45 kick
+      angleIncrease: 7
+      angleDecay: 20
+      fireRate: 4 # Semi-auto pistol, heavy caliber wont let you mag-dump it so fast
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/45ACP.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_M1911_magazine_(.45)
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_M1911_magazine_(.45)
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a45acp
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a45acp
+- type: entity
+  name: Colt Mark IV
+  parent: civ13_pistol
+  id: civ13_pistol_Colt_Mark_IV
+  description: A slightly upgraded model of the M1911A1. Chambered in .45 ACP.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/colt.rsi
+    - type: Gun
+      projectileSpeed: 18 # .45 ACP
+      minAngle: 7
+      maxAngle: 58 # Slightly better handling 1911
+      angleIncrease: 6.5
+      angleDecay: 22
+      fireRate: 4 # Semi-auto pistol, heavy caliber wont let you mag-dump it so fast
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/45ACP.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a45acp
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a45acp
+- type: entity
+  name: TT-33
+  parent: civ13_pistol
+  id: civ13_pistol_TT_33
+  description: >-
+    The standard issue pistol of the Soviet Union before the 1950's. Chambered
+    in 7.62x25mm Tokarev.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/tt30.rsi
+    - type: Gun
+      projectileSpeed: 22 # 7.62x25mm Tokarev - fast
+      minAngle: 6
+      maxAngle: 55
+      angleIncrease: 5.8
+      angleDecay: 24
+      fireRate: 4.5 # Semi-auto pistol, small caliber
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/762x25.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_TT_33_magazine_(7.62x25mm)
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_TT_33_magazine_(7.62x25mm)
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a762x25
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a762x25
+- type: entity
+  name: Makarov PM
+  parent: civ13_pistol
+  id: civ13_pistol_Makarov_PM
+  description: >-
+    The standard issue pistol of the Soviet Union and Russian Federation after
+    the 1950's. Chambered in 9x18mm Makarov.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/makarov.rsi
+    - type: Gun
+      projectileSpeed: 19 # 9x18mm Makarov - intermediate power
+      minAngle: 5
+      maxAngle: 48
+      angleIncrease: 5.2
+      angleDecay: 26
+      fireRate: 5 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/762x25.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_PM_Makarov_magazine_(9x18mm)
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_PM_Makarov_magazine_(9x18mm)
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x18
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x18
+- type: entity
+  name: Stechkin APS
+  parent: civ13_pistol
+  id: civ13_pistol_Stechkin_APS
+  description: A Soviet selective fire machine pistol. Chambered in 9x18mm Makarov.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/aps.rsi
+    - type: Gun
+      projectileSpeed: 19 # 9x18mm Makarov
+      minAngle: 5 # Heavier than PM, slightly more stable for single shots
+      maxAngle: 50
+      angleIncrease: 5.5
+      angleDecay: 25
+      fireRate: 6.0 # Full-auto pistol, soviet glock with da switch
+      selectedMode: FullAuto
+      availableModes:
+        - FullAuto
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/762x25.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x18
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x18
+- type: entity
+  name: Beretta M9
+  parent: civ13_pistol
+  id: civ13_pistol_Beretta_M9
+  description: >-
+    The standard issue pistol of US Armed Forces from 1985 to 2017. Chambered in
+    9mm Luger.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/m9beretta.rsi
+    - type: Gun
+      projectileSpeed: 20 # 9mm
+      minAngle: 5
+      maxAngle: 50 # Standard modern 9mm (like Glock)
+      angleIncrease: 5
+      angleDecay: 25
+      fireRate: 5 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/9mm.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+- type: entity
+  name: Beretta M9
+  parent: civ13_pistol
+  id: civ13_pistol_Beretta_M9_tan
+  description: >-
+    The standard issue pistol of US Armed Forces from 1985 to 2017. Chambered in
+    9mm Luger. This one blends in with the desert.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/tanm9.rsi
+      quickEquip: true
+    - type: Gun
+      projectileSpeed: 20 # 9mm
+      minAngle: 5
+      maxAngle: 50 # Same as regular M9
+      angleIncrease: 5
+      angleDecay: 25
+      fireRate: 5 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/9mm.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+- type: entity
+  name: Jericho 941
+  parent: civ13_pistol
+  id: civ13_pistol_Jericho_941
+  description: >-
+    The standard issue pistol of the IDF of the late 20th century. Chambered in
+    9mm Parabellum.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/jericho941.rsi
+    - type: Gun
+      projectileSpeed: 20 # 9mm
+      minAngle: 5
+      maxAngle: 48 # Heavy frame, good control
+      angleIncrease: 4.8
+      angleDecay: 27
+      fireRate: 5 # Semi-auto pistol
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/9mm.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+- type: entity
+  name: Desert Eagle
+  parent: civ13_pistol
+  id: civ13_pistol_Desert_Eagle
+  description: Designed and developed by Magnum Research Inc. Chambered in 50cal.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/deagle.rsi
+    - type: Gun
+      projectileSpeed: 20 # .50 AE
+      minAngle: 15 # Massive recoil
+      maxAngle: 80
+      angleIncrease: 12
+      angleDecay: 15
+      fireRate: 3.5 # Semi-auto pistol, You just cant mag-dump it cause of heavy recoil
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/deagle.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a50cal
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a50cal
+- type: entity
+  name: Desert Eagle (44.magnum)
+  parent: civ13_pistol
+  id: civ13_pistol_Desert_Eagle_(44.magnum)
+  description: Designed and developed by Magnum Research Inc. Chambered in 44.magnum.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/deagle.rsi
+    - type: Gun
+      projectileSpeed: 21 # .44 Magnum - very powerful
+      minAngle: 12
+      maxAngle: 75
+      angleIncrease: 10
+      angleDecay: 18
+      fireRate: 3.8 # Semi-auto pistol, slightly better recoil than .50 AE version
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/deagle.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a44magnum
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a44magnum
+- type: entity
+  name: Browning hi-power
+  parent: civ13_pistol
+  id: civ13_pistol_Browning_hi_power
+  description: >-
+    Produced by Fabrique Nationale of Belgium, This old handgun is chambered in
+    9mm Parabellum.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/browning_hp.rsi
+    - type: Gun
+      projectileSpeed: 20 # 9mm
+      minAngle: 5
+      maxAngle: 48 # Classic, good handling
+      angleIncrease: 4.9
+      angleDecay: 26
+      fireRate: 5 # Already present
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/9mm.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_Browning_hi_power_magazine
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_Browning_hi_power_magazine
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a9x19
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a9x19
+- type: entity
+  name: STI 2011
+  parent: civ13_pistol
+  id: civ13_pistol_STI_2011
+  description: >-
+    A high end specialized version of a m1911 made by the request of the US
+    marshal service chambered .45 S&W.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/Guns/sti2011.rsi
+    - type: Gun
+      projectileSpeed: 18 # .45 ACP
+      minAngle: 6 # High-end, very good control for .45
+      maxAngle: 50
+      angleIncrease: 5.5
+      angleDecay: 25
+      fireRate: 4.5 # Already present
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Fire/45ACP.ogg
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: civ13_magazine_default
+
+          priority: 2
+          whitelist:
+            tags:
+              - civ13_magazine_default
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: civ13_caliber_a45acp
+          priority: 1
+          whitelist:
+            tags:
+              - civ13_caliber_a45acp
