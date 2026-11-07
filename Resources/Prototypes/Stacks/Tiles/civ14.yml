@@ -1,0 +1,23 @@
+- type: stack
+  id: FloorTileThatch
+  name: stack-thatch-floor
+  spawn: FloorTileItemThatch
+  maxCount: 30
+
+- type: stack
+  id: FloorTileRoad
+  name: stack-ancient-road
+  spawn: FloorTileItemRoad
+  maxCount: 30
+
+- type: stack
+  id: FloorTileCobblestone
+  name: stack-cobblestone-floor
+  spawn: FloorTileItemCobblestone
+  maxCount: 30
+
+- type: stack
+  id: FloorTileBridge
+  name: stack-bridging-tile
+  spawn: FloorTileItemBridge
+  maxCount: 10
