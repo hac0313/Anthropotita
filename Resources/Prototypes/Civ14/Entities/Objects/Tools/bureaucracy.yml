@@ -1,0 +1,14 @@
+- type: entity
+  name: карандаш
+  parent: Pen
+  id: Pencil
+  description: Простой деревянный карандаш.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/bureaucracy.rsi
+      state: pencil
+    - type: Construction
+      graph: Pencil
+      node: end
+      agemin: 0
+      agemax: 8

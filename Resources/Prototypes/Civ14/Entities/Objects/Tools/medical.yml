@@ -1,0 +1,51 @@
+- type: entity
+  id: DoctorsHandbook
+  parent: BaseItem
+  name: "справочник врача"
+  description: Медицинский справочник, который поможет вам диагностировать пациентов.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/library.rsi
+      state: bookmed
+    - type: ActivatableUI
+      key: enum.HealthAnalyzerUiKey.Key
+    - type: UserInterface
+      interfaces:
+        enum.HealthAnalyzerUiKey.Key:
+          type: HealthAnalyzerBoundUserInterface
+    - type: HealthAnalyzer
+      scanningEndSound:
+        path: "/Audio/Items/Medical/healthscanner.ogg"
+    - type: Appearance
+    - type: Construction
+      graph: DoctorsHandbook
+      node: end
+      agemin: 0
+      agemax: 8
+
+- type: construction
+  name: "справочник врача"
+  id: DoctorsHandbook
+  graph: DoctorsHandbook
+  startNode: start
+  targetNode: end
+  category: construction-category-misc
+  description: A medical guidebook that helps you diagnose patients.
+  icon: { sprite: Civ14/Objects/library.rsi, state: bookmed }
+  objectType: Item
+  agemin: 0
+  agemax: 8
+
+- type: constructionGraph
+  id: DoctorsHandbook
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: end
+          steps:
+            - material: WoodPlank
+              amount: 20
+              doAfter: 15
+    - node: end
+      entity: DoctorsHandbook

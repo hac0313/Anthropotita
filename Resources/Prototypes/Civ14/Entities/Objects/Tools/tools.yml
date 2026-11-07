@@ -1,0 +1,250 @@
+- type: entity
+  name: костяная лопата
+  parent: Shovel
+  id: BoneShovel
+  description: Большой инструмент для копания и перемещения грунта.
+  components:
+    - type: Tag
+      tags:
+        - Shovel
+    - type: Sprite
+      sprite: Civ14/Objects/StoneAge/bone_shovel.rsi
+      state: icon
+    - type: STWeight
+      self: 5
+    - type: Item
+      size: Large
+    - type: Construction
+      graph: BoneShovel
+      node: boneshovel
+      agemin: 0
+      agemax: 8
+
+- type: entity
+  name: каменная лопата
+  parent: Shovel
+  id: StoneShovel
+  description: Большой инструмент для копания и перемещения грунта.
+  components:
+    - type: Tag
+      tags:
+        - Shovel
+    - type: Sprite
+      sprite: Civ14/Objects/StoneAge/stone_shovel.rsi
+      state: icon
+    - type: STWeight
+      self: 5
+    - type: Item
+      size: Large
+    - type: Construction
+      graph: StoneShovel
+      node: stoneshovel
+      agemin: 0
+      agemax: 8
+
+- type: entity
+  name: костяная кирка
+  parent: Pickaxe
+  id: BonePickaxe
+  description: Грубая кирка с фигурным костяным наконечником.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/StoneAge/bone_pickaxe.rsi
+      state: icon
+    - type: MeleeWeapon
+      damage:
+        types:
+          Piercing: 8
+          Blunt: 3
+    - type: Wieldable
+    - type: IncreaseDamageOnWield
+      damage:
+        groups:
+          Brute: 6
+        types:
+          Structural: 30
+    - type: STWeight
+      self: 5
+    - type: Item
+      size: Large
+    - type: Construction
+      graph: BonePickaxe
+      node: bonepickaxe
+      agemin: 0
+      agemax: 8
+
+- type: entity
+  name: костяной нож
+  parent: BaseKnife
+  id: BoneKnife
+  description: Грубо заточенный костяной нож.
+  components:
+    - type: Tag
+      tags:
+        - Knife
+    - type: MeleeWeapon
+      damage:
+        types:
+          Slash: 10
+    - type: Construction
+      graph: BoneKnife
+      node: boneknife
+      agemin: 0
+      agemax: 8
+    - type: Sprite
+      sprite: Civ14/Objects/StoneAge/bone_knife.rsi
+      size: 2
+      state: icon
+    - type: STWeight
+      self: 1
+    - type: Item
+      size: Small
+      sprite: Civ14/Objects/StoneAge/bone_knife.rsi
+
+- type: entity
+  id: FlintAxe
+  name: кремневый топор
+  parent: HydroponicsToolHatchet
+  description: Грубый топор, сделанный из заостренного кремня.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/StoneAge/flint_axe.rsi
+      state: icon
+    - type: MeleeWeapon
+      attackRate: 1.1
+      damage:
+        types:
+          Blunt: 4
+          Slash: 8
+          Structural: 6
+    - type: STWeight
+      self: 3
+    - type: Item
+      size: Normal
+    - type: Clothing
+      sprite: Civ14/Objects/StoneAge/flint_axe.rsi
+      quickEquip: false
+      slots:
+        - back
+        - belt
+    - type: Construction
+      graph: FlintAxe
+      node: flintaxe
+      agemin: 0
+      agemax: 8
+
+- type: entity
+  id: BoneAxe
+  name: костяной топор
+  parent: HydroponicsToolHatchet
+  description: Грубо высеченный предмет, сделанный из заостренной кости.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/StoneAge/bone_axe.rsi
+      state: icon
+    - type: MeleeWeapon
+      attackRate: 1.1
+      damage:
+        types:
+          Blunt: 5
+          Slash: 8
+          Structural: 6
+    - type: STWeight
+      self: 3
+    - type: Item
+      size: Normal
+    - type: Clothing
+      sprite: Civ14/Objects/StoneAge/bone_axe.rsi
+      quickEquip: false
+      slots:
+        - back
+        - belt
+    # Surgery components removed: Scalpel/BoneSaw/SurgeryTool are not present in this codebase.
+    - type: Construction
+      graph: BoneAxe
+      node: boneaxe
+      agemin: 0
+      agemax: 8
+
+- type: entity
+  parent: BaseItem
+  name: Плуг
+  id: Plough
+  description: Простой деревянный плуг. Используйте его на грунтовых участках для вспашки сельскохозяйственных угодий.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/items.rsi
+      state: plough
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 6
+      soundHit:
+        collection: MetalThud
+    - type: STWeight
+      self: 5
+    - type: Item
+      size: Large
+      shape:
+        - 0,0,4,4 # 5x5
+    - type: PhysicalComposition
+      materialComposition:
+        Wood: 100
+    - type: Clothing
+      sprite: Civ14/Objects/items.rsi
+      quickEquip: false
+      slots:
+        - back
+    - type: Construction
+      graph: Plough
+      node: plough
+      agemin: 0
+      agemax: 8
+    - type: PloughTool
+      delay: 8.0
+
+- type: entity
+  name: молоток
+  parent: BaseItem
+  id: Hammer
+  description: Разбей все этим вдребезги.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/items.rsi
+      state: hammer
+    - type: STWeight
+      self: 3
+    - type: Item
+      size: Normal
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 6
+      soundHit:
+        collection: MetalThud
+
+- type: entity
+  name: деревянный молоток
+  parent: Hammer
+  id: WoodHammer
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/StoneAge/wood_hammer.rsi
+      state: icon
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 3
+    - type: Tag
+      tags:
+        - Wrench
+    - type: Tool
+      qualities:
+        - Anchoring
+      useSound:
+        path: /Audio/Items/ratchet.ogg
+    - type: Construction
+      graph: WoodHammer
+      node: woodhammer
+      agemin: 0
+      agemax: 8

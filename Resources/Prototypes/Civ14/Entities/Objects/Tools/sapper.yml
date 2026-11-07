@@ -1,0 +1,13 @@
+- type: entity
+  name: мешки с песком
+  parent: BaseItem
+  id: ItemSandbag
+  description: Куча мешков с песком, которые можно использовать для создания укрепления.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/items.rsi
+      state: sandbag_new
+    - type: STWeight
+      self: 25
+    - type: Item
+      size: Ginormous
