@@ -158,6 +158,9 @@
 - type: Tag
   id: BotanyShovel # Storage whitelist: ClothingBeltPlant. ItemMapper: ClothingBeltPlant
 
+- type: Tag
+  id: Shovel # Used by tools and tool whitelists
+
 - type: Tag # Used for specifically chemistry bottles.
   id: Bottle # Storage whitelist: ChemMaster, ChemBag, SmartFridge, ClothingBeltJanitor, ClothingBeltMedical, ClothingBeltPlant
 
@@ -469,6 +472,9 @@
 
 - type: Tag # Exists on diagonal walls and windows
   id: Diagonal # Used by TileWallsCommand and FixRotationsCommand
+
+- type: Tag
+  id: Wall # Used by walls and wall-like structures for targeting, pathing, and recipes
 
 - type: Tag
   id: Diamond # CargoBounty: BountySalvageDiamond

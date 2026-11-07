@@ -1,0 +1,28 @@
+- type: entity
+  parent: CrateBaseWeldable
+  id: CrateWood
+  name: деревянный ящик
+  components:
+    - type: Icon
+      sprite: Civ14/Objects/Storage/wood_crate.rsi
+    - type: Sprite
+      sprite: Civ14/Objects/Storage/wood_crate.rsi
+    - type: Construction
+      graph: CrateWood
+      node: end
+      agemin: 0
+      agemax: 8
+      containers:
+        - entity_storage
+    - type: StaticPrice
+      price: 100
+
+- type: entity
+  parent: CrateBaseWeldable
+  id: CrateMilitary
+  name: военный ящик
+  components:
+    - type: Icon
+      sprite: Civ14/Objects/Storage/green_crate.rsi
+    - type: Sprite
+      sprite: Civ14/Objects/Storage/green_crate.rsi

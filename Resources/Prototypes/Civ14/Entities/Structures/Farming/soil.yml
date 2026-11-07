@@ -1,0 +1,16 @@
+- type: entity
+  parent: BaseHydroponicsSoil
+  name: вспаханное поле
+  id: ploughedField
+  description: Вспаханное поле.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/floors.rsi
+      state: dirt_ploughed
+      noRot: true
+    - type: PlantTray
+      drawWarnings: false
+      waterLevel: 100
+      nutritionLevel: 100
+    - type: CompostableField
+      compostTime: 5.0

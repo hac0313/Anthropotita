@@ -1,0 +1,188 @@
+- type: entity
+  parent: CrateWood
+  id: CrateWoodArrows
+  name: деревянный ящик
+  suffix: arrows
+  components:
+    - type: StorageFill
+      contents:
+        - id: ArrowIron
+          amount: 12
+
+- type: entity
+  parent: CrateWood
+  id: CrateWoodRollerbeds
+  name: ящик для кровати на роликах
+  suffix: rollerbeds
+  components:
+    - type: StorageFill
+      contents:
+        - id: CheapRollerBedSpawnFolded
+          amount: 5
+
+- type: entity
+  parent: CrateWood
+  id: CrateWoodBarbedwire
+  name: ящик с колючей проволокой
+  suffix: barbed wire
+  components:
+    - type: StorageFill
+      contents:
+        - id: MaterialBarbwire5
+          amount: 5
+
+- type: entity
+  parent: CrateWood
+  id: CrateWoodSandbags
+  name: ящик из мешков с песком
+  suffix: sandbags
+  components:
+    - type: StorageFill
+      contents:
+        - id: MaterialSandbags1
+          amount: 10
+
+- type: entity
+  parent: CrateWood
+  id: CrateWoodPPShAmmo
+  name: Ящик с боеприпасами PPSh
+  suffix: PPSh
+  components:
+    - type: StorageFill
+      contents:
+        - id: civ13_magazine_PPSh_41_drum_magazine_(7.62x25mm)
+          amount: 6
+
+- type: entity
+  parent: CrateWood
+  id: CrateWoodMP40Ammo
+  name: Ящик с боеприпасами MP40
+  suffix: MP40
+  components:
+    - type: StorageFill
+      contents:
+        - id: civ13_magazine_mp40_(9x19mm)
+          amount: 10
+
+- type: entity
+  parent: CrateWood
+  id: CrateWoodMosinAmmo
+  name: Ящик с боеприпасами "Мосин"
+  suffix: 7.62x54mm
+  components:
+    - type: StorageFill
+      contents:
+        - id: civ13_magazine_clip_(7.62x54mm)
+          amount: 15
+
+- type: entity
+  parent: CrateWood
+  id: CrateWoodMauserAmmo
+  name: Ящик с боеприпасами для Маузера
+  suffix: 7.92x57mm
+  components:
+    - type: StorageFill
+      contents:
+        - id: civ13_magazine_clip_(7.92x57mm)
+          amount: 15
+
+- type: entity
+  parent: CrateWood
+  id: CrateWoodDPAmmo
+  name: Ящик с боеприпасами DP
+  suffix: DP
+  components:
+    - type: StorageFill
+      contents:
+        - id: civ13_magazine_DP_pan_(7.62x54mmR)
+          amount: 10
+
+- type: entity
+  parent: CrateWood
+  id: CrateWoodMG34Ammo
+  name: Ящик с боеприпасами MG34
+  suffix: MG34
+  components:
+    - type: StorageFill
+      contents:
+        - id: civ13_magazine_MG34_magazine_(7.92x57mm)
+          amount: 6
+
+- type: entity
+  parent: CrateMilitary
+  id: CrateMilitarySTANAGAmmo
+  name: Ящик с боеприпасами STANAG
+  suffix: "5.56x45mm"
+  components:
+    - type: StorageFill
+      contents:
+        - id: civ13_magazine_STANAG_magazine_(5.56x45mm)
+          amount: 14
+
+- type: entity
+  parent: CrateMilitary
+  id: CrateMilitaryAK74Ammo
+  name: Ящик с боеприпасами для АК-74
+  suffix: "5.56x39mm"
+  components:
+    - type: StorageFill
+      contents:
+        - id: civ13_magazine_AK_74_magazine_(5.45x39mm)
+          amount: 14
+
+- type: entity
+  parent: CrateMilitary
+  id: CrateMilitaryRPDAmmo
+  name: Ящик с боеприпасами РПД
+  suffix: "7.62x39mm"
+  components:
+    - type: StorageFill
+      contents:
+        - id: civ13_magazine_RPD_drum_(7.62x39)
+          amount: 10
+
+- type: entity
+  parent: CrateMilitary
+  id: CrateMilitaryM60Ammo
+  name: Ящик с боеприпасами M60
+  suffix: "7.62x51mm"
+  components:
+    - type: StorageFill
+      contents:
+        - id: civ13_magazine_belt_(7.62x51mm)
+          amount: 10
+
+- type: entity
+  parent: CrateMilitary
+  id: CrateMilitaryMortarAmmo
+  name: Ящик с боеприпасами для миномета
+  components:
+    - type: StorageFill
+      contents:
+        - id: MortarShellHE
+          amount: 10
+
+# Blue wardrobe
+- type: entity
+  id: WardrobeCivMedical
+  parent: WardrobeBase
+  name: гардероб медицинской одежды
+  description: В гардеробе была набита хирургическая одежда.
+  components:
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: generic
+      stateDoorOpen: generic_open
+      stateDoorClosed: blue_door
+    - type: StorageFill
+      contents:
+        - id: ClothingHandsGlovesLatex
+          amount: 2
+        - id: ClothingMaskBreathMedical
+          amount: 2
+        - id: ClothingHeadHatSurgcapBlue
+          amount: 2
+        - id: civ13_uniform_white_medical_scrubs
+          amount: 2
+        - id: ClothingOuterCoatLabOpened
+          amount: 2

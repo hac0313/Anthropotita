@@ -1,0 +1,331 @@
+- type: entity
+  name: копьё ассагай
+  parent: Spear
+  id: civ13_spear_assagai
+  description: >-
+    Деревянное копье с длинной рукоятью и тонко заточенным железным наконечником;
+    известно как излюбленное оружие зулусских воинов.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/assagai.rsi
+    - type: MeleeWeapon
+      range: 2
+      attackRate: 0.8
+      damage:
+        types:
+          Piercing: 19
+      soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+    - type: Item
+      heldPrefix: null
+      sprite: Civ14/Weapons/assagai.rsi
+    - type: DisarmMalus
+    - type: Construction
+      graph: civ13_spear_assagai
+      node: end
+- type: entity
+  name: дори
+  parent: Spear
+  id: civ13_spear_dory
+  description: Копье длиной 2 метра, использовавшееся воинами эллинской культуры.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/dory.rsi
+    - type: MeleeWeapon
+      range: 2.2
+      attackRate: 0.8
+      damage:
+        types:
+          Piercing: 16
+      soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+    - type: STWeight
+      self: 16
+    - type: Item
+      heldPrefix: null
+      sprite: Civ14/Weapons/dory.rsi
+    - type: DisarmMalus
+    - type: Construction
+      graph: civ13_spear_dory
+      node: end
+- type: entity
+  name: сарисса
+  parent: Spear
+  id: civ13_spear_sarissa
+  description: Копье длиной 5 метров, используемое солдатами фаланги.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/sarissa.rsi
+
+    - type: MeleeWeapon
+      attackRate: 0.6
+      range: 2.8
+      damage:
+        types:
+          Piercing: 16
+      soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+    - type: STWeight
+      self: 16
+    - type: Item
+      heldPrefix: null
+      sprite: Civ14/Weapons/sarissa.rsi
+    - type: DisarmMalus
+    - type: Construction
+      graph: civ13_spear_sarissa
+      node: end
+
+- type: entity
+  name: пика
+  parent: Spear
+  id: civ13_spear_pike
+  description: Длинное копье.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/pike.rsi
+    - type: MeleeWeapon
+      range: 2.2
+      attackRate: 0.8
+      damage:
+        types:
+          Piercing: 15
+      soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+    - type: STWeight
+      self: 12
+    - type: Item
+      heldPrefix: null
+      sprite: Civ14/Weapons/pike.rsi
+    - type: DisarmMalus
+    - type: Construction
+      graph: civ13_spear_pike
+      node: end
+- type: entity
+  name: нагината
+  parent: Spear
+  id: civ13_spear_naginata
+  description: >-
+    Деревянный посох с лезвием на конце, которым можно пронзать тех, кто оскорбляет
+    твоего господина.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/naginata.rsi
+    - type: MeleeWeapon
+      range: 2.2
+      attackRate: 0.8
+      damage:
+        types:
+          Slash: 1
+          Piercing: 13
+      soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+    - type: IncreaseDamageOnWield
+      damage:
+        types:
+          Piercing: 5
+          Slash: 2
+    - type: Item
+      heldPrefix: null
+      sprite: Civ14/Weapons/naginata.rsi
+    - type: DisarmMalus
+    - type: Construction
+      graph: civ13_spear_naginata
+      node: end
+- type: entity
+  name: алебарда
+  parent: Spear
+  id: civ13_spear_halberd
+  description: Копье, увенчанное лезвием топора.
+  components:
+    - type: Sprite
+      sprite: Civ14/Weapons/halberd.rsi
+    - type: MeleeWeapon
+      range: 2.5
+      attackRate: 0.6
+      damage:
+        types:
+          Slash: 8
+          Piercing: 13
+      soundHit:
+        path: /Audio/Weapons/bladeslice.ogg
+    - type: Item
+      heldPrefix: null
+      sprite: Civ14/Weapons/halberd.rsi
+    - type: DisarmMalus
+    - type: Construction
+      graph: civ13_spear_halberd
+      node: end
+
+- type: construction
+  name: копье ассагаи
+  id: civ13_spear_assagai
+  graph: civ13_spear_assagai
+  startNode: start
+  targetNode: end
+  category: weapons
+  description: >-
+    Деревянное копье с длинной рукоятью и тонко заточенным железным наконечником;
+    известно как излюбленное оружие зулусских воинов.
+  icon:
+    sprite: Civ14/Weapons/assagai.rsi
+    state: icon
+  objectType: Item
+  agemin: 2
+  agemax: 8
+
+- type: constructionGraph
+  id: civ13_spear_assagai
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: end
+          steps:
+            - material: Iron
+              amount: 5
+              doAfter: 5
+    - node: end
+      entity: civ13_spear_assagai
+- type: construction
+  name: дори
+  id: civ13_spear_dory
+  graph: civ13_spear_dory
+  startNode: start
+  targetNode: end
+  category: weapons
+  description: Копье длиной 2 метра, использовавшееся воинами эллинской культуры.
+  icon:
+    sprite: Civ14/Weapons/dory.rsi
+    state: icon
+  objectType: Item
+  agemin: 1
+  agemax: 8
+
+- type: constructionGraph
+  id: civ13_spear_dory
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: end
+          steps:
+            - material: WoodPlank
+              amount: 6
+              doAfter: 7
+    - node: end
+      entity: civ13_spear_dory
+- type: construction
+  name: сарисса
+  id: civ13_spear_sarissa
+  graph: civ13_spear_sarissa
+  startNode: start
+  targetNode: end
+  category: weapons
+  description: Копье длиной 5 метров, используемое солдатами фаланги.
+  icon:
+    sprite: Civ14/Weapons/sarissa.rsi
+    state: icon
+  objectType: Item
+  agemin: 1
+  agemax: 8
+
+- type: constructionGraph
+  id: civ13_spear_sarissa
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: end
+          steps:
+            - material: WoodPlank
+              amount: 8
+              doAfter: 9
+    - node: end
+      entity: civ13_spear_sarissa
+
+- type: construction
+  name: пика
+  id: civ13_spear_pike
+  graph: civ13_spear_pike
+  startNode: start
+  targetNode: end
+  category: weapons
+  description: Длинное копье.
+  icon:
+    sprite: Civ14/Weapons/pike.rsi
+    state: icon
+  objectType: Item
+  agemin: 2
+  agemax: 8
+
+- type: constructionGraph
+  id: civ13_spear_pike
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: end
+          steps:
+            - material: Steel
+              amount: 5
+              doAfter: 5
+    - node: end
+      entity: civ13_spear_pike
+- type: construction
+  name: нагината
+  id: civ13_spear_naginata
+  graph: civ13_spear_naginata
+  startNode: start
+  targetNode: end
+  category: weapons
+  description: >-
+    Деревянный посох с лезвием на конце, которым можно пронзать тех, кто оскорбляет
+    твоего господина.
+  icon:
+    sprite: Civ14/Weapons/naginata.rsi
+    state: icon
+  objectType: Item
+  agemin: 2
+  agemax: 8
+
+- type: constructionGraph
+  id: civ13_spear_naginata
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: end
+          steps:
+            - material: Steel
+              amount: 5
+              doAfter: 5
+    - node: end
+      entity: civ13_spear_naginata
+- type: construction
+  name: алебарда
+  id: civ13_spear_halberd
+  graph: civ13_spear_halberd
+  startNode: start
+  targetNode: end
+  category: weapons
+  description: Копье, увенчанное лезвием топора.
+  icon:
+    sprite: Civ14/Weapons/halberd.rsi
+    state: icon
+  objectType: Item
+  agemin: 2
+  agemax: 8
+
+- type: constructionGraph
+  id: civ13_spear_halberd
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: end
+          steps:
+            - material: Steel
+              amount: 5
+              doAfter: 5
+    - node: end
+      entity: civ13_spear_halberd

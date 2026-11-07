@@ -1,0 +1,67 @@
+- type: entity
+  parent: BaseItem
+  id: MortarKit
+  name: переносной миномет
+  description: Вспомогательное оружие, способное сбрасывать бомбы на головы на расстоянии. Это оружие выглядит довольно современным.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/Mortars/mortar.rsi
+      layers:
+        - map: ["mortar"]
+          state: mortar_carry
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.25,0.25,0.25"
+          density: 20
+          mask:
+            - ItemMask
+          restitution: 0.3
+          friction: 0.2
+        mortar:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.49,-0.49,0.49,0.49"
+          density: 20
+          layer:
+            - Impassable
+          mask:
+            - Impassable
+          hard: false
+    - type: CollisionWake
+      enabled: false
+    - type: Anchorable
+      flags:
+        - Unanchorable
+    - type: Item
+      size: Huge
+    - type: Mortar
+      fireDelay: 10
+    - type: Damageable
+      damageContainer: Inorganic
+    - type: UserInterface
+      interfaces:
+        enum.MortarUiKey.Key:
+          type: MortarBui
+    - type: ActivatableUI
+      key: enum.MortarUiKey.Key
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.MortarVisualLayers.State:
+          mortar:
+            Item: { state: mortar_carry }
+            Deployed: { state: mortar_deploy }
+    - type: MeleeSound
+      soundGroups:
+        Brute:
+          path: "/Audio/Effects/metal_break1.ogg"
+
+- type: entity
+  parent: MortarKit
+  id: MortarOld
+  name: старая переносная ступка
+  description: Вспомогательное оружие, способное сбрасывать бомбы на головы людей на расстоянии.
+  components:
+    - type: Sprite
+      sprite: Civ14/Objects/Mortars/mortar_old.rsi

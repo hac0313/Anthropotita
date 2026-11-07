@@ -82,6 +82,23 @@ public sealed partial class BlindableSystem : EntitySystem
         UpdateEyeDamage(blindable, true);
     }
 
+    /// <summary>
+    /// Transfers blindness data from one blindable component to another.
+    /// </summary>
+    /// <param name="to">The target blindable component.</param>
+    /// <param name="from">The source blindable component.</param>
+    /// <param name="toEntity">The target entity.</param>
+    [PublicAPI]
+    public void TransferBlindness(BlindableComponent? to, BlindableComponent? from, EntityUid toEntity)
+    {
+        if (to == null || from == null)
+            return;
+
+        to.EyeDamage = from.EyeDamage;
+        to.IsBlind = from.IsBlind;
+        UpdateIsBlind((toEntity, to));
+    }
+
     private void UpdateEyeDamage(Entity<BlindableComponent?> blindable, bool isDamageChanged)
     {
         if (!Resolve(blindable, ref blindable.Comp, false))
